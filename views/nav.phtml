@@ -1,0 +1,27 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">Store</a>
+            <ul class="nav pull-right">
+                <li class="divider-vertical"><a href="index.php?page=logIn">Mon Compte</a></li>
+                <li class="divider-vertical"><a href="index.php?page=panier">Panier</a></li>
+            </ul>
+            <form class="navbar-search pull-right">
+                    <input type="text" class="search-query" placeholder="Search">
+            </form>
+             
+            <ul class="nav">
+                <li class="divider-vertical"><a href="index.php?page=accueil">Acceuil</a></li>
+                <li class="divider-vertical"><a href="index.php?page=new">Nouveaut&eacute;</a></li>
+                <li class="divider-vertical"><a href="index.php?page=new">Platine</a></li>
+                <li class="divider-vertical">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="index.php?page=vinyle">Vinyle<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <?=require("apps/categorie.php");?>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,52 @@
+/*---GENERAL---*/
+body
+{
+ 
+}
+
+.content
+{
+	
+}
+/*--- HEADER----*/
+header
+{
+	
+}
+
+/*---NAV---*/
+nav
+{
+
+}
+
+.croix{
+    content:"";
+    background: url(sources/img/croix.png) no-repeat left top;
+    width: 20px;
+    height: 20px;
+}
+
+.croix:hover{
+    background-position: 100% top;
+}
+
+/*----SECTION---*/
+section 
+{
+}
+
+/*---accueil---*/
+
+
+
+/*---FOOTER---*/
+footer
+{
+
+}
+
+
+
+
+
