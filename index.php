@@ -26,8 +26,7 @@ if(isset($_GET['ajax']))
 		require('apps/'.$page.'.php');			
 }
 	
-else
-	require('views/skel.phtml');
+require('views/skel.phtml');
 
 
 ?>
