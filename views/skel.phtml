@@ -7,9 +7,9 @@
     <link rel="icon" href="sources/img/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="sources/css/bootstrap.css">
     <link rel="stylesheet" href="sources/css/bootstrap-responsive.css">
-    <link rel="stylesheet" href="sources/css/stylesheet.css">
     <link rel="stylesheet" href="sources/css/animate.css">
     <link rel="stylesheet" href="sources/css/font-awesome.css">
+    <link rel="stylesheet" href="sources/css/stylesheet.css">
     <script src="sources/js/jquery.js"></script>
   	<script src="sources/js/bootstrap.js"></script>
   </head>
@@ -28,6 +28,10 @@
     <section class='container'>
       <?php require('apps/'.$page.'.php'); ?>	
 		</section>
+
+    <section class='container'>
+      <?php require('apps/aside.php'); ?> 
+    </section>
 		
     <footer class="container">
       <?php require('apps/footer.php'); ?>
