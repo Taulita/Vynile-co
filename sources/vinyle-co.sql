@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 06, 2014 at 12:26 PM
+-- Generation Time: Aug 06, 2014 at 01:28 PM
 -- Server version: 5.5.37-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4
 
@@ -66,8 +66,8 @@ INSERT INTO `t_article` (`id`, `artiste`, `nom`, `annee`, `style`, `prixTTC`, `t
 (15, 'Otis Redding', '', 1997, 'soul', 60, 'Lorem ipsum dolor sit amet\nconsectetur adipisicing elit\nSapiente voluptas nostrum architecto\nrepellendus, laudantium labore\namet libero porro aspernatur blanditis', 'Lorem ipsum dolor sit amet\nconsectetur adipisicing elit\nSapiente voluptas nostrum architecto\nrepellendus, laudantium labore\namet libero porro aspernatur blanditis', 'ATCO', 'vinyl', 'otis', 5, '0', '0'),
 (16, 'Lauryn Hill', 'The Miseducation of Lauryn Hill', 1998, 'hip-hop', 31.11, '1. Intro [From "The Miseducation Of"]\n2. Lost Ones\n3. Ex-Factor\n4. To Zion\n5. Doo Wop (That Thing)\n6. Superstar\n7. Final Hour\n8. When It Hurts So Bad\n9. I Used To Love Him', '1. Forgive Them Father\n2. Every Ghetto, Every City\n3. Nothing Even Matters\n4. Everything Is Everything\n5. The Miseducation Of Lauryn Hill\n6. Can''t Take My Eyes Off Of You\n7. Tell Him', 'Columbia', 'vinyl', 'miseducation', 5, '0', '0'),
 (17, 'The Fugees', 'The Score', 1996, 'hip-hop', 29, '1.Red Intro\n2.How Many Mics\n3.Ready or Not\n4.Zealots\n5.The Beast\n6.Fu-Gee-La\n7.Family Business\n8.Killing Me Softly With His Song', '9.The Score\n10.The Mask\n11.Cowboys\n12.No Woman, No Cry\n13.Manifest / Outro\n14.Fu-Gee-La - (Refugee Camp remix)\n15.Fu-Gee-La - (Sly & Robbie mix)', 'Columbia', 'vinyl', 'fugees', 5, '0', '0'),
-(18, '', 'Platine Elvis', 1990, '', 199, '', '', '', 'platine', 'elvis', 5, 'Bose', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda rem, in numquam asperiores. Aperiam officia, ea earum voluptatem. Necessitatibus libero delectus numquam impedit vel doloribus ducimus eos error unde cum animi distinctio facere harum autem quisqu'),
-(75, '', 'Platine Mike Brant', 2012, '', 450, '', '', '', 'Platine', 'Mike-brant', 5, 'Sony', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, id iste distinctio unde enim esse nam fugit hic accusantium veniam, accusamus magni saepe perspiciatis neque, tenetur dignissimos nulla vero harum. Praesentium quos ab quaerat facere modi excepturi at');
+(18, '', 'Platine Elvis', 1990, '', 199, '', '', '', 'platine', 'platine1', 5, 'Bose', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda rem, in numquam asperiores. Aperiam officia, ea earum voluptatem. Necessitatibus libero delectus numquam impedit vel doloribus ducimus eos error unde cum animi distinctio facere harum autem quisqu'),
+(75, '', 'Platine Mike Brant', 2012, '', 450, '', '', '', 'Platine', 'platine2', 5, 'Sony', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, id iste distinctio unde enim esse nam fugit hic accusantium veniam, accusamus magni saepe perspiciatis neque, tenetur dignissimos nulla vero harum. Praesentium quos ab quaerat facere modi excepturi at');
 
 -- --------------------------------------------------------
 
