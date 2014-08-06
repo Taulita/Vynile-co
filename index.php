@@ -1,5 +1,5 @@
 <?php
-
+require('apps/param.conf.php');
 require('apps/vinyle.php');
 $error = '';
 
@@ -17,14 +17,14 @@ else
 
 
 
-if(isset($_GET['ajax']))
-{
-	if($section != '')
-		require('apps/'.$section.'.php');
+// if(isset($_GET['ajax']))
+// {
+// 	if($section != '')
+// 		require('apps/'.$section.'.php');
 
-	else
-		require('apps/'.$page.'.php');			
-}
+// 	else
+// 		require('apps/'.$page.'.php');			
+// }
 	
 require('views/skel.phtml');
 

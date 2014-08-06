@@ -6,6 +6,7 @@ if (isset($_POST['submit']))
 {
 	$req= "SELECT * FROM t_user WHERE email='".$_POST['email']."'";
 	$res = mysqli_query($db, $req);
+	var_dump($res);
 	if (mysqli_num_rows($res)==1)
 	{
 		$user = mysqli_fetch_object($res, "User");
@@ -18,14 +19,16 @@ if (isset($_POST['submit']))
 
 	else
 	{
+		var_dump($_POST);
 		$user = new User($_POST);
 		if ($user->isOK())
 		{
+			var_dump($_POST);
 			echo"OK";
 			$req= "INSERT INTO t_user (email, password, birthdate, address, codePostal, ville ) 
 				VALUES('".mysqli_real_escape_string($db, $user->getEmail())."',
 					'".mysqli_real_escape_string($db, $user->getPassword())."',
-					'".$user->getBirthdate()."',
+					'".date("Y-m-d", strtotime($user->getBirthday()))."',
 					'".mysqli_real_escape_string($db, $user->getAddress())."',
 					'".mysqli_real_escape_string($db, $user->getCodePostal())."',
 					'".mysqli_real_escape_string($db, $user->getVille())."')";
