@@ -2,62 +2,122 @@
 class User
 {
 	private $id;
-	private $login;
-	private $password;
 	private $email;
+	private $password;
 	private $birthdate;
+	private $address;
+	private $codePostal;
+	private $ville;
+	private $error = false;
 
-	public function __construct($login, $password, $email, $birthdate)
+	public function __construct($post = array())
 	{
-		$this->setLogin($login);
-		$this->setPassword($password);
-		$this->setEmail($email);
-		$this->setBirthdate($birthdate);
+		if ($this->id == null)
+		{
+			if (isset($post['email'], $post['password'], $post['birthdate'], $post['address'],$post['codePostal'], $post['ville'] ))
+			{
+				$this->setEmail($post['email']);
+				$this->setPassword($post['password']);
+				$this->setBirthdate($post['birthdate']);
+				$this->setAddress($post['address']);
+				$this->setCodePostal($post['codePostal']);
+				$this->setVille($post['ville']);
+			}
+			else
+				$this->error = true;
+		}
 	}
-	public function setLogin($login)
-	{
-		if (strlen($login) > 2)
-			$this->login = $login;
-	}
-	public function setPassword($password)
-	{
-		if (strlen($password) > 3)
-			$this->password = md5($password);
-	}
-	public function setEmail($email)
+	
+
+	// FONCTION SETTER//
+	private function setEmail($email)
 	{
 		if (filter_var($email, FILTER_VALIDATE_EMAIL))
 			$this->email = $email;
 	}
-	public function setBirthdate($birthdate)//Format : JJ/MM/YYYY
+	private function setPassword($password)
+	{
+		if (strlen($password) > 3)
+			$this->password = md5($password);
+	}
+	private function setBirthdate($birthdate)//Format : JJ/MM/YYYY
 	{
 		if (preg_match("/^(\d{4})-(\d{2})-(\d{2})$/", $birthdate, $matches))
 		{
 			if(checkdate($matches[2], $matches[3], $matches[1]))
-			{
 				$this->birthdate = $birthdate;
-			}
 		}
 	}
-	public function getLogin()
+	private function setAddress($address)
 	{
-		return $this->login;
+		if (strlen($address) > 6)
+			$this->address = $address;
 	}
-	public function getPassword()
+
+	private function setCodePostal($codePostal)
 	{
-		return 'Encrypted';
+		if (strlen($codePostal) == 5)
+			$this->codePostal = $codePostal;
 	}
-	public function getEmail()
+
+	private function setVille($ville)
+	{
+		if (strlen($ville)>4)
+			$this->ville = $ville;
+	}	
+
+
+
+	// FONCTION GETTER//	
+	private function getEmail()
 	{
 		return $this->email;
 	}
-	public function getBirthdate()
+	private function getPassword()
+	{
+		return $this->password;
+	}
+	private function getBirthdate()
 	{
 		return $this->birthdate;
 	}
+	private function getAddress()
+	{
+		return $this->address;
+	}
+	private function getCodePostal()
+	{
+		return $this->codePostal;
+	}
+	private function getVille()
+	{
+		return $this->ville;
+	}
+
+	public function getUser()
+	{
+		$user=array();
+		$user['email']=$this->getEmail();
+		$user['password']=$this->getPassword();
+		$user['birthdate']=$this->getBirthdate();
+		$user['address']=$this->getAddress();
+		$user['codePostal']=$this->getCodePostal();
+		$user['ville']=$this->getVille();
+		return $user;
+	}
+
+
+
+	// FONCTION ANNEX //
 	public function verifPassword($password)
 	{
-		return ($this->password == md5($password));
+		return $this->password == md5($password);
+	}
+
+	// FONCTION ERREUR//
+	public function isOK()
+	{
+		return $this->error == false;
 	}
 }
 ?>
