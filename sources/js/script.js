@@ -12,7 +12,3 @@ $("a").click(function(info)
     $('#move').html(section);
   });
 });
-
-
-//
- 
