@@ -1,5 +1,5 @@
 <?php
-require('apps/param.conf.php');
+require('sources/confphp/param.conf.php');
 require('apps/vinyle.php');
 $error = '';
 
