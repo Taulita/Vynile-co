@@ -11,33 +11,41 @@
     <link rel="stylesheet" href="sources/css/font-awesome.css">
     <link rel="stylesheet" href="sources/css/stylesheet.css">
     <script src="sources/js/jquery.js"></script>
+    <script src="sources/js/script.js"></script>
   	<script src="sources/js/bootstrap.js"></script>
   </head>
   
   <body>
-  <div class="content">
 
-    <header class="container">
-      <?php require('apps/header.php'); ?>
-    </header>
+    <div id="container-fluid" class="content page">
+      <div class="row-fluid">
 
-    <nav class="container">
-      <?php require('apps/nav.php'); ?>
-    </nav>
+            <div class="content span10">
 
-    <section id="page" class='container'>
-      <?php require('apps/'.$page.'.php'); ?>	
-		</section>
+                <header class="container">
+                  <?php require('apps/header.php'); ?>
+                </header>
 
-    <section class='container'>
-      <?php require('apps/aside.php'); ?> 
-    </section>
-		
-    <footer class="container">
-      <?php require('apps/footer.php'); ?>
-	  </footer>
+                <nav class="container">
+                  <?php require('apps/nav.php'); ?>
+                </nav>
 
-  </div>
+                <section id="page" class='container'>
+                  <?php require('apps/'.$page.'.php'); ?>   
+                </section>
+                    
+                <footer class="container">
+                  <?php require('apps/footer.php'); ?>
+                </footer>
+
+            </div>
+          
+            <aside class="span2 aside">
+                <?php require('apps/aside.php'); ?> 
+            </aside>
+
+      </div>
+    </div> 
 	</body>
   <script src="sources/js/script.js"></script>
 </html>

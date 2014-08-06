@@ -1,39 +1,58 @@
 /*---GENERAL---*/
-body
-{
- 
+body {
+	font-size: 12px;
+	font-family: FontAwesome, sans-serif;
+	color: #500000;
+	margin: 0;
+	padding: 0;
+	background: #ffffff url(../../sources/img/vinyl_1680.jpg) no-repeat;
 }
 
-.content
-{
-	
+.page {
+	margin-left: 5em;	
 }
+
 /*--- HEADER----*/
-header
-{
-	
+header {
+	margin-top: 4em;
+}
+header img {
+	vertical-align: -3.2em;
+	border-radius: 0.8em;
+	width: 9%;
+	height: auto;
+}
+header h1 {
+	display: inline-block;
+	margin-left: .5em;
+
+}
+
+/*--- ASIDE----*/
+
+aside {
+	height: 100%;
 }
 
 /*---NAV---*/
-nav
-{
+nav {
 
 }
 
-.croix{
+
+/*.croix {
     content:"";
     background: url(sources/img/croix.png) no-repeat left top;
     width: 20px;
     height: 20px;
 }
 
-.croix:hover{
+.croix:hover {
     background-position: 100% top;
 }
-
+*/
 /*----SECTION---*/
-section 
-{
+section {
 }
 
 /*---accueil---*/
@@ -41,12 +60,16 @@ section
 
 
 /*---FOOTER---*/
-footer
-{
-
+footer {
+	text-align: center;
 }
 
-
+.copyright {
+    font-family: Arial,
+         "Helvetica Neue",
+         Helvetica,
+         sans-serif;
+}
 
 
 
