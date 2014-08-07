@@ -15,13 +15,13 @@ if(isset ($_POST['email']) && isset ($_POST['password']))
 		else
 		{
 			$error="Mot de passe incorrect.";
-			require('views/navlogin.phtml');
+			require('views/navLogin.phtml');
 		}					
 	}
 	else
 	{
 		$error="Vous n'	&ecirc;tes pas encore inscrits.";
-		require('views/navlogin.phtml');
+		require('views/navLogin.phtml');
 	}
 }
 
@@ -33,5 +33,5 @@ else if (isset($_POST['f_out']))
 }
 
 else
-require('views/navlogin.phtml');
+require('views/navLogin.phtml');
 ?>
