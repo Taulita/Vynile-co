@@ -4,6 +4,7 @@ require('sources/confphp/param.conf.php');
 session_start();
 
 $error = '';
+$_SESSION['admin']='';
 
 if (isset($_GET['nav']))
 	$nav = $_GET['nav'];
@@ -13,7 +14,7 @@ else
 if (isset($_GET['navSection']))
 	$navSection = $_GET['navSection'];
 else
-	$navSection = 'log';
+	$navSection = 'navlogIn';
 
 if (isset($_GET['page']))
 	$page = $_GET['page'];
@@ -40,7 +41,9 @@ else
 // 	else
 // 		require('apps/'.$page.'.php');			
 // }
-	
+
+
+
 require('apps/skel.php');
 
 
