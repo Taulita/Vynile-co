@@ -4,7 +4,11 @@ require('sources/confphp/param.conf.php');
 session_start();
 
 $error = '';
-$_SESSION['admin']='';
+
+$access="nav";
+$access1="navlogIn";
+$access2=["accueil", "store", "article", "panier", "LogIn"];
+$access3=["new","platine","vinyl","funk", "soul", "rock"];
 
 if (isset($_GET['nav']))
 	$nav = $_GET['nav'];

@@ -1,16 +1,47 @@
-<form action="index.php?page=logIn" method="POST">
-	<label for="email"></label><input type="text" name="email" placeholder="Email"/>
-	<br />
-	<input type="password" name="password" placeholder="Mot de Passe"/>
-	<br />
-	<input type="date" name="birthdate" placeholder="jj/mm/aaaa"/>
-	<br />
-	<input type="text" name="address" placeholder="Adresse"/>
-	<br />
-	<input type="text" name="code" placeholder="Code Postal"/>
-	<br />
-	<input type="text" name="ville" placeholder="Ville"/>
-	<br />
+<div class="span6 offset2">
+	<div>
+    	<strong><?=$error?></strong> 
+    </div>
+	<form class="form-horizontal" action="index.php?page=logIn" method="POST">
+		<div class="control-group">
+			<label class="control-label" for="nom"><i class="fa fa-user fa-fw"></i></label>
+			<div class="controls">
+				<input class="input-block-level" type="text" name="nom" placeholder="Nom"/>
+				<input class="input-block-level" type="text" name="prenom" placeholder="Pr&eacute;nom"/>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="email"><i class="fa fa-envelope-o fa-fw"></i></label>
+			<div class="controls">
+				<input class="input-block-level" type="email" name="email" placeholder="Email"/>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="password"><i class="fa fa-lock fa-fw"></i></label>
+			<div class="controls">
+				<input class="input-block-level" type="password" name="password" placeholder="Mot de Passe"/>
+				<!--<input class="input-block-level" type="password" name="configpassword" placeholder="Confirmer votre mot de Passe"/>-->
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="birthdate"><i class="fa fa-smile-o fa-fw"></i></label>
+			<div class="controls">
+				<input class="input-block-level" type="text" name="birthdate" placeholder="jj/mm/aaaa"/>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="birthdate"><i class="fa fa-home fa-fw"></i></label>
+			<div class="controls">
+				<input class="input-block-level" type="text" name="address" placeholder="Adresse"/>
+				<input class="input-block-level" type="text" name="code" placeholder="Code Postal"/>
+				<input class="input-block-level" type="text" name="ville" placeholder="Ville"/>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" name="submit"value="Validate" />
+			</div>
+		</div>
 
-	<input type="submit" value="Validate" name="submit"/>
-</form>
+	</form>
+</div>

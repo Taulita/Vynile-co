@@ -3,6 +3,8 @@ class User
 {
 	private $id;
 	private $email;
+	private $name;
+	private $firstname;
 	private $password;
 	private $birthdate;
 	private $address;
@@ -14,8 +16,10 @@ class User
 	{
 		if ($this->id == null)
 		{
-			if (isset($post['email'], $post['password'], $post['birthdate'], $post['address'],$post['code'], $post['ville'] ))
+			if (isset($post['email'], $post['nom'], $post['prenom'], $post['password'], $post['birthdate'], $post['address'],$post['code'], $post['ville'] ))
 			{
+				$this->setName($post['nom']);
+				$this->setFirstName($post['prenom']);
 				$this->setEmail($post['email']);
 				$this->setPassword($post['password']);
 				$this->setBirthdate($post['birthdate']);
@@ -30,6 +34,22 @@ class User
 	
 
 	// FONCTION SETTER//
+	private function setName($nom)
+	{
+		if (strlen($nom)>2)
+			$this->name =trim($nom);
+		else
+			$this->error=true;
+	}
+
+	private function setFirstName($prenom)
+	{
+		if (strlen($prenom)>2)
+			$this->firstname = trim($prenom);
+		else
+			$this->error=true;
+	}
+
 	private function setEmail($email)
 	{
 		if (filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -44,14 +64,13 @@ class User
 		else
 			$this->error=true;
 	}
-	private function setBirthdate($birthdate)//Format : JJ/MM/YYYY
+	private function setBirthdate($birth)//Format : JJ/MM/YYYY
 	{
-		if (preg_match("/^(\d{2})-(\d{2})-(\d{4})$/", $birthdate, $matches))
+		$date=explode( "/", $birth);
+		if(isset($date[1]))
 		{
-			if(checkdate($matches[2], $matches[1], $matches[3]))
-				$this->birthdate = $birthdate;
-			else
-			$this->error=true;
+			if(checkdate($date[1], $date[0], $date[2]))	
+				$this->birthdate= $birth;	
 		}
 		else
 			$this->error=true;
@@ -149,7 +168,6 @@ class User
 	// FONCTION ERREUR//
 	public function isOK()
 	{
-		var_dump($this->error);
 		return $this->error == false;
 	}
 }
