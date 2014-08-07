@@ -1,11 +1,11 @@
 <div class="row span10 offset1">
 	<figure>
-		<img class="img-polaroid span6" src="sources/img/album/<?=$article['img']?>.jpg" alt="<?=$article['nom']?>">
+		<img class="img-polaroid span6" src="sources/img/platine/<?=$article['img']?>.jpg" alt="<?=$article['nom']?>">
 
 		<figcaption class="pull-right span6">
-			<h4>ALBUM : <?=$article['nom']?> <br> ARTISTE : <?=$article['artiste']?></h4>
+			<h4>NOM: <?=$article['nom']?></h4>
 			<p><strong>ANNEE: <?=$article['annee']?> </strong> <br>
-				LABEL: <?=$article['label']?></p>
+				MARQUE: <?=$article['marque']?></p>
 			<p><?=$article['brefDescriptif']?></p>	
 			<h6>Disponibilit&eacute;: <?=$article['stock']?> en stock</h6>
 		</figcaption>
@@ -13,8 +13,7 @@
 	</figure>
 </div>
 <div class="row span8 offset2">
-	<span class="span6"><?=$article['tracksFaceA']?></span>
-	<span class="span6"><?=$article['tracksFaceB']?></span>
+	<?=$article['ficheTechnique']?>
 </div>
 
 <div class="row span8 offset2">

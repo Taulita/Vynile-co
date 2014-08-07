@@ -1,9 +1,7 @@
 <li class="row">
-	<span class="span3">
-		<div class="image">
-			<img class="img-polaroid" src="sources/img/platine/<?=$platine['img']?>.jpg" alt="<?=$platine['nom']?>">
-		</div>
-	</span>
+	
+	<img class="img-polaroid span3" src="sources/img/platine/<?=$platine['img']?>.jpg" alt="<?=$platine['nom']?>">
+	
 	<span class="span6">
 		<h4><?=$platine['nom']?></h4>
 		<p><strong><?=$platine['annee']?> </strong> ~ <?=$platine['marque']?></p>
@@ -12,8 +10,8 @@
 	</span>
 	<span class="span3">
 		<h6>Prix TCC : <?=$platine['prixTTC']?> &euro;</h6>
-		<form action="index.php?page=article">
-			<input type="hidden" name="id" value="<?=$platine['id']?>" method="POST">
+		<form action="index.php?page=article2" method="POST">
+			<input type="hidden" name="id" value="<?=$platine['id']?>">
 			<button type="submit" name="info" class="btn btn-info">Plus d'Info</button>
 		</form>
 		<form action="index.php?page=skel" method="POST">
