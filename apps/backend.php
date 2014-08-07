@@ -5,6 +5,7 @@ require('../sources/confphp/param.conf.php');
 #var_dump($_POST);
 
 //-----------------------GESTION DES CLIENTS------------------------//
+
 function getClients() {
 	$server = "localhost";
 	$db_name = "vinyle-co";
@@ -22,7 +23,6 @@ function getClients() {
 	return $clients;
 
 }
-
 
 $clients = getClients();
 

@@ -4,6 +4,7 @@ require('sources/confphp/param.conf.php');
 session_start();
 
 $error = '';
+$_SESSION['admin']='';
 
 if (isset($_GET['nav']))
 	$nav = $_GET['nav'];
@@ -13,18 +14,22 @@ else
 if (isset($_GET['navSection']))
 	$navSection = $_GET['navSection'];
 else
-	$navSection = 'log';
+	$navSection = 'navlogIn';
 
 if (isset($_GET['page']))
 	$page = $_GET['page'];
 else
 	$page = 'accueil';
 
-
 if(isset($_GET['section']))
 	$section = $_GET['section'];
 else
 	$section ='';
+
+if(isset($_GET['search']))
+	$search = $_GET['search'];
+else
+	$search ='';
 
 
 
@@ -36,8 +41,10 @@ else
 // 	else
 // 		require('apps/'.$page.'.php');			
 // }
-	
-require('views/skel.phtml');
+
+
+
+require('apps/skel.php');
 
 
 ?>

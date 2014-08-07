@@ -82,7 +82,20 @@ class User
 
 
 
-	// FONCTION GETTER//	
+	// FONCTION GETTER//
+
+	public function getId()
+	{
+		return $this->id;
+	}
+	public function getFirstName()
+	{
+		return $this->firstname;
+	}
+	public function getName()
+	{
+		return $this->name;
+	}
 	public function getEmail()
 	{
 		return $this->email;
@@ -107,6 +120,11 @@ class User
 	{
 		return $this->ville;
 	}
+	public function getIsAdmin()
+	{
+		return $this->admin;
+	}
+
 
 	public function getUser()
 	{
