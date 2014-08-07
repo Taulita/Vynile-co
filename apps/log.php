@@ -20,7 +20,7 @@ if(isset ($_POST['email']) && isset ($_POST['password']))
 	}
 	else
 	{
-		$error="Vous n'	&ecirc;tes pas encore inscrits.";
+		$error="Vous n'	&ecirc;tes pas encore inscrit.";
 		require('views/navlogin.phtml');
 	}
 }

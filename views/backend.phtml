@@ -1,4 +1,6 @@
-<table>
+<!--       Tableau des clients       -->
+<h3>Clients</h3>
+<table class="table" title="Client List">
     <tr>
         <th>Client ID</th>
         <th>First Name</th>
@@ -9,6 +11,8 @@
         <th>Zip code</th>
         <th>Birth Date</th>
         <th>Is Admin?</th>
+        <th>Modify</th>
+        <th>Delete</th>
     </tr>
     <?php
     $i=0;
@@ -23,15 +27,63 @@
         <td><?=$clients[$i]->getCodePostal()?></td>
         <td><?=$clients[$i]->getBirthdate()?></td>
         <td><?=$clients[$i]->getIsAdmin()?></td>
+        <td><a href="#">Modify</a></td>
+        <td><a href="#">Delete entry</a></td>
     </tr>
     <?php
         $i++;
     }
     ?>
+</table>
 
-
+<!--       Tableau des vinyles      -->
+<h3>Vinyls</h3>
+<table class="table" title="Item List">
+    <tr>
+        <th>Article ID</th>
+        <th>Artist</th>
+        <th>Nom</th>
+        <th>Year</th>
+        <th>Style</th>
+        <th>Prix TTC</th>
+        <th>Tracks side A</th>
+        <th>Tracks side B</th>
+        <th>Label</th>
+        <th>Cover</th>
+        <th>Stock</th>
+        <th>Brand</th>
+        <th>Technical Details</th>
+        <th>Modify</th>
+        <th>Delete</th>
+    </tr>
+    <?php
+    $i=0;
+    while (isset($clients[$i])) {?>
+    <tr>
+        <td><?=$clients[$i]->getId()?></td>
+        <td><?=$clients[$i]->getFirstName()?></td>
+        <td><?=$clients[$i]->getName()?></td>
+        <td><?=$clients[$i]->getEmail()?></td>
+        <td><?=$clients[$i]->getAddress()?></td>
+        <td><?=$clients[$i]->getVille()?></td>
+        <td><?=$clients[$i]->getCodePostal()?></td>
+        <td><?=$clients[$i]->getBirthdate()?></td>
+        <td><?=$clients[$i]->getIsAdmin()?></td>
+        <td><?=$clients[$i]->getIsAdmin()?></td>
+        <td><?=$clients[$i]->getIsAdmin()?></td>
+        <td><?=$clients[$i]->getIsAdmin()?></td>
+        <td><?=$clients[$i]->getIsAdmin()?></td>
+        <td><a href="#">Modify</a></td>
+        <td><a href="#">Delete entry</a></td>
+    </tr>
+    <?php
+        $i++;
+    }
+    ?>
 </table>
 
 
-   <!-- <form action="apps/backend.php">
-    </form>-->
+
+<!--       Tableau des platines       -->
+
+<h3>Platines</h3>
