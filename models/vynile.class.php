@@ -1,20 +1,41 @@
 <?php
 require_once("article.class.php");
-class Vynil extends ARTICLE
+class Vinyl extends Article
 {
 	private $artiste;
-	private $annee;
 	private $style;
 	private $tracksFaceA;
 	private $tracksFaceB;
+	private $label;
 
-	public function __construct($categorie)
+	public function __construct()
 	{
 		$this->categorie='Vinyle';
 	}
-	
-
-
+	public function getArtiste()
+	{
+		return $this->artiste;
+	}
+	public function getStyle()
+	{
+		return $this->style;
+	}
+	public function getTracksFaceA()
+	{
+		return $this->tracksFaceA;
+	}
+	public function getTracksFaceB()
+	{
+		return $this->tracksFaceB;
+	}
+	public function getNom()
+	{
+		return $this->nom;
+	}
+	public function getLabel()
+	{
+		return $this->label;
+	}
 	
 
 

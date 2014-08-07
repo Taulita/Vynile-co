@@ -58,7 +58,57 @@
     </tr>
     <?php
     $i=0;
-    while (isset($clients[$i])) {?>
+    while (isset($vinyls[$i])) {?>
+    <tr>
+        <td><?=$vinyls[$i]->getId()?></td>
+        <td><?=$vinyls[$i]->getArtiste()?></td>
+        <td><?=$vinyls[$i]->getNom()?></td>
+        <td><?=$vinyls[$i]->getAnnee()?></td>
+        <td><?=$vinyls[$i]->getStyle()?></td>
+        <td><?=$vinyls[$i]->getPrixTTC()?></td>
+        <td><?=$vinyls[$i]->getTracksFaceA()?></td>
+        <td><?=$vinyls[$i]->getTracksFaceB()?></td>
+        <td><?=$vinyls[$i]->getLabel()?></td>
+        <td><img src="../sources/img/vinyl_1680.jpg" width="50%"/></td>
+        <td><?=$vinyls[$i]->getStock()?></td>
+        <td><?=$vinyls[$i]->getMarque()?></td>
+        <td><?=$vinyls[$i]->getDescription()?></td>
+        <td><a href="#">Modify</a></td>
+        <td><a href="#">Delete entry</a></td>
+    </tr>
+    <?php
+        $i++;
+    }
+    ?>
+</table>
+
+
+
+<!--       Tableau des platines       -->
+
+<h3>Platines</h3>
+
+<table class="table" title="Item List">
+    <tr>
+        <th>Article ID</th>
+        <th>Artist</th>
+        <th>Nom</th>
+        <th>Year</th>
+        <th>Style</th>
+        <th>Prix TTC</th>
+        <th>Tracks side A</th>
+        <th>Tracks side B</th>
+        <th>Label</th>
+        <th>Cover</th>
+        <th>Stock</th>
+        <th>Brand</th>
+        <th>Technical Details</th>
+        <th>Modify</th>
+        <th>Delete</th>
+    </tr>
+    <?php
+    $i=0;
+    while (isset($platines[$i])) {?>
     <tr>
         <td><?=$clients[$i]->getId()?></td>
         <td><?=$clients[$i]->getFirstName()?></td>
@@ -81,9 +131,3 @@
     }
     ?>
 </table>
-
-
-
-<!--       Tableau des platines       -->
-
-<h3>Platines</h3>

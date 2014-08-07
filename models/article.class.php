@@ -1,15 +1,19 @@
 <?php
-
+$tauxTVA = 20/100;
 class Article
 {
+	protected $id;
 	protected $nom;
+	protected $annee;
 	protected $categorie;
-	protected $tauxTVA=20/100;
+	protected $marque;
+	protected $tauxTVA;
 	protected $tva;
-	protected $stock;
 	protected $prixHT;
 	protected $prixTTC;
-
+	protected $stock;
+	protected $description;
+	
 		
 	private function calculTVA($prix)
 	{
@@ -21,14 +25,25 @@ class Article
 		$this->prixHT=$prix-$this->prix;
 	}
 
-	
-	public function getCategorie()
+	public function getId()
 	{
-		return $this->categorie;
+		return $this->id;
 	}
 	public function getNom()
 	{
 		return $this->nom;
+	}
+	public function getAnnee()
+	{
+		return $this->annee;
+	}
+	public function getCategorie()
+	{
+		return $this->categorie;
+	}
+	public function getMarque()
+	{
+		return $this->marque;
 	}
 	public function getTva()
 	{
@@ -48,6 +63,10 @@ class Article
 	public function getStock()
 	{
 		return $this->stock;
+	}
+	public function getDescription()
+	{
+		return $this->description;
 	}
 
 }
