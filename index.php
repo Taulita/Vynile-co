@@ -20,11 +20,15 @@ if (isset($_GET['page']))
 else
 	$page = 'accueil';
 
-
 if(isset($_GET['section']))
 	$section = $_GET['section'];
 else
 	$section ='';
+
+if(isset($_GET['search']))
+	$search = $_GET['search'];
+else
+	$search ='';
 
 
 
@@ -37,7 +41,7 @@ else
 // 		require('apps/'.$page.'.php');			
 // }
 	
-require('views/skel.phtml');
+require('apps/skel.php');
 
 
 ?>

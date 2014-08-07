@@ -1,0 +1,22 @@
+<li class="row">
+	<span class="span3">
+		<img class="img-polaroid" src="sources/img/platine/<?=$platine['img']?>.jpg" alt="<?=$platine['nom']?>">
+	</span>
+	<span class="span6">
+		<h4><?=$platine['nom']?></h4>
+		<p><strong><?=$platine['annee']?> </strong> ~ <?=$platine['marque']?></p>
+		<p><?=$platine['brefDescriptif']?></p>
+		<h6>Disponibilit&eacute;: <?=$platine['stock']?> en stock</h6>
+	</span>
+	<span class="span3">
+		<h6>Prix TCC : <?=$platine['prixTTC']?> &euro;</h6>
+		<form action="index.php?page=article">
+			<input type="hidden" name="id" value="<?=$platine['id']?>" >
+			<button type="submit" name="info" class="btn btn-info">Plus d'Info</button>
+		</form>
+		<form action="index.php?page=skel">
+			<input type="hidden" name="id" value="<?=$platine['id']?>" >
+			<button type="submit" name="info" class="btn btn-inverse">Ajouter au Panier</button>
+		</form>
+	</span>
+</li>

@@ -1,20 +1,33 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="#"><img src="sources/img/logo1.jpg" alt="logo"></a>
+            <a class="brand" href="#">
+                <img src="sources/img/logo1.jpg" alt="logo">
+            </a>
             <ul class="nav pull-right">
                 <li class="divider-vertical dropdown">
                     <?=require("apps/".$navSection.".php");?>
                 </li>
-                <li class="divider-vertical"><a href="index.php?page=panier">Panier</a></li>
+                <li class="divider-vertical">
+                    <a href="index.php?page=panier">Panier</a>
+                </li>
             </ul>
              
             <ul class="nav pull-left">
-                <li class="divider-vertical"><a href="index.php?page=accueil">Accueil</a></li>
-                <li class="divider-vertical"><a href="index.php?page=new">Nouveaut&eacutes</a></li>
-                <li class="divider-vertical"><a href="index.php?page=new">Platines</a></li>
+                <li class="divider-vertical">
+                    <a href="index.php?page=accueil">Accueil</a>
+                </li>
+                <li class="divider-vertical">
+                    <a href="index.php?page=store&section=list&search=new">Nouveaut&eacutes</a>
+                </li>
+                <li class="divider-vertical">
+                    <a href="index.php?page=store&section=list&search=platine">Platines</a>
+                </li>
                 <li class="divider-vertical dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="index.php?page=vinyle">Vinyles <b class="caret"></b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="index.php?page=store&section=list&search=vinyle">
+                        Vinyles 
+                        <b class="caret"></b>
+                    </a>
                     <ul class="dropdown-menu">
                         <?=require("apps/categorie.php");?>
                     </ul>
