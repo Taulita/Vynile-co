@@ -1,0 +1,27 @@
+<div class="row span10 offset1">
+	<figure>
+		<img class="img-polaroid span6" src="sources/img/album/<?=$article['img']?>.jpg" alt="<?=$article['nom']?>">
+
+		<figcaption class="pull-right span6">
+			<h4>ALBUM : <?=$article['nom']?> <br> ARTISTE : <?=$article['artiste']?></h4>
+			<p><strong>ANNEE: <?=$article['annee']?> </strong> <br>
+				LABEL: <?=$article['label']?></p>
+			<p><?=$article['brefDescriptif']?></p>	
+			<h6>Disponibilit&eacute;: <?=$article['stock']?> en stock</h6>
+		</figcaption>
+
+	</figure>
+</div>
+<div class="row span8 offset2">
+	<span class="span6"><?=$article['tracksFaceA']?></span>
+	<span class="span6"><?=$article['tracksFaceB']?></span>
+</div>
+
+<div class="row span8 offset2">
+	<h6 class="span6 text-center">Prix TCC : <?=$article['prixTTC']?> &euro;</h6>
+		
+	<form class="span6"action="skel.php" method="POST">
+		<input type="hidden" name="id" value="<?=$article['id']?>" >
+		<button type="submit" name="info" class="btn btn-inverse">Ajouter au Panier</button>
+	</form>	
+</div>

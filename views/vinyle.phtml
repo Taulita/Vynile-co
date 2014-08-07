@@ -3,18 +3,18 @@
 		<img class="img-polaroid" src="sources/img/album/<?=$vinyle['img']?>.jpg" alt="<?=$vinyle['nom']?>">
 	</span>
 	<span class="span6">
-		<h4><?=$vinyle['nom']?> de <?=$vinyle['artiste']?></h4>
+		<h4><?=$vinyle['nom']?> ~ <?=$vinyle['artiste']?></h4>
 		<p><strong><?=$vinyle['annee']?> </strong> ~ <?=$vinyle['label']?></p>
 		<p><?=$vinyle['brefDescriptif']?></p>
 		<h6>Disponibilit&eacute;: <?=$vinyle['stock']?> en stock</h6>
 	</span>
 	<span class="span3">
-		<h6>Prix TCC : <?=$vinyle['prixTTC']?></h6>
-		<form action="index.php?page=article">
+		<h6>Prix TCC : <?=$vinyle['prixTTC']?> &euro;</h6>
+		<form action="index.php?page=article" method="POST">
 			<input type="hidden" name="id" value="<?=$vinyle['id']?>" >
 			<button type="submit" name="info" class="btn btn-info">Plus d'Info</button>
 		</form>
-		<form action="index.php?page=skel">
+		<form action="skel.php" method="POST">
 			<input type="hidden" name="id" value="<?=$vinyle['id']?>" >
 			<button type="submit" name="info" class="btn btn-inverse">Ajouter au Panier</button>
 		</form>
