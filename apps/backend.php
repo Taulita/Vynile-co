@@ -24,13 +24,12 @@ function getClients() {
 
 }
 
-
 $clients = getClients();
-$user = $user.getUser();
+
 require('../views/backend.phtml');
 
 
-getUser();
+
 
 
 

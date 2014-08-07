@@ -10,22 +10,28 @@
         <th>Birth Date</th>
         <th>Is Admin?</th>
     </tr>
+    <?php
+    $i=0;
+    while (isset($clients[$i])) {?>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><?=$clients[$i]->getId()?></td>
+        <td><?=$clients[$i]->getFirstName()?></td>
+        <td><?=$clients[$i]->getName()?></td>
+        <td><?=$clients[$i]->getEmail()?></td>
+        <td><?=$clients[$i]->getAddress()?></td>
+        <td><?=$clients[$i]->getVille()?></td>
+        <td><?=$clients[$i]->getCodePostal()?></td>
+        <td><?=$clients[$i]->getBirthdate()?></td>
+        <td><?=$clients[$i]->getIsAdmin()?></td>
     </tr>
-    
+    <?php
+        $i++;
+    }
+    ?>
 
 
 </table>
 
 
-    <?=$clients[0]->getEmail()?>
    <!-- <form action="apps/backend.php">
     </form>-->
