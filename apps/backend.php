@@ -52,26 +52,26 @@ $vinyls = getVinyls();
 
 //-----------------------GESTION DES PLATINES------------------------//
 
-/*function getClients() {
+function getPlatines() {
 	$server = "localhost";
 	$db_name = "vinyle-co";
 	$user = "root";
 	$password = "troiswa";
 	$db = mysqli_connect($server, $user, $password, $db_name);
 
-	$req = "SELECT * FROM t_user";
+	$req = "SELECT * FROM t_articles WHERE categorie = 'platine'";
 	$res = mysqli_query($db, $req);
-	$clients = array();
+	$platines = array();
 
-	while ($client = mysqli_fetch_object($res, "User")) {
-		$clients[] = $client;
+	while ($platine = mysqli_fetch_object($res, "Article")) {
+		$platines[] = $platine;
 	}
-	return $clients;
+	return $platines;
 
 }
 
 
-$clients = getClients();*/
+$platines = getPlatines();
 
 require('../views/backend.phtml');
 

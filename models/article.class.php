@@ -56,7 +56,7 @@ class Article
 
 	public function getPrixTTC()
 	{
-		return $this->prixHT * $tauxTVA;
+		return $this->prixHT * $this->tauxTVA;
 	}
 
 	public function getStock()
