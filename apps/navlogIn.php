@@ -21,13 +21,15 @@ if(isset ($_POST['email']) && isset ($_POST['password']))
 		else
 		{
 			$error="Mot de passe incorrect.";
-			require('views/navlogin.phtml');
+			require('views/navlogIn.phtml');
 		}					
 	}
 	else
 	{
+
 		$error="Vous n'	&ecirc;tes pas encore inscrit.";
-		require('views/navlogin.phtml');
+		require('views/navlogIn.phtml');
+
 	}
 }
 
@@ -35,9 +37,9 @@ else if (isset($_POST['f_out']))
 {
 	session_destroy(); 
 	$_SESSION=array();
-	require('views/navLogin.phtml');
+	require('views/navlogIn.phtml');
 }
 
 else
-require('views/navlogin.phtml');
+require('views/navlogIn.phtml');
 ?>
