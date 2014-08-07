@@ -5,6 +5,7 @@ require('../sources/confphp/param.conf.php');
 #var_dump($_POST);
 
 //-----------------------GESTION DES CLIENTS------------------------//
+
 function getClients() {
 	$server = "localhost";
 	$db_name = "vinyle-co";
@@ -25,11 +26,11 @@ function getClients() {
 
 
 $clients = getClients();
-
+$user = $user.getUser();
 require('../views/backend.phtml');
 
 
-
+getUser();
 
 
 
