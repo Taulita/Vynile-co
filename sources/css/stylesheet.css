@@ -5,7 +5,7 @@ body {
 	color: #500000;
 	margin: 0;
 	padding: 0;
-	background: #ffffff url(../../sources/img/vinyl_1680.jpg) no-repeat;
+	/*background: #ffffff url(../../sources/img/vinyl_1680.jpg) no-repeat;*/
 }
 
 .page {
@@ -14,13 +14,7 @@ body {
 
 /*--- HEADER----*/
 header {
-	margin-top: 4em;
-}
-header img {
-	vertical-align: -3.2em;
-	border-radius: 0.8em;
-	width: 9%;
-	height: auto;
+	margin-top: 8em;
 }
 header h1 {
 	display: inline-block;
@@ -38,19 +32,27 @@ aside {
 nav {
 
 }
+.brand {
+	width:7%;
+	height:auto;
 
-
-/*.croix {
-    content:"";
-    background: url(sources/img/croix.png) no-repeat left top;
-    width: 20px;
-    height: 20px;
+}
+nav img {
+	float: left;
+	vertical-align: -3.2em;
+	border-radius: 0.8em;
+	width: 100%;
+	height: auto;
+}
+.marg{
+	margin-bottom: 1%;
 }
 
-.croix:hover {
-    background-position: 100% top;
+.box{
+	padding:5%;
 }
-*/
+
+
 /*----SECTION---*/
 section {
 }

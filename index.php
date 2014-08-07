@@ -1,8 +1,19 @@
 <?php
+ini_set('display_errors', 1);
 require('sources/confphp/param.conf.php');
-require('apps/vinyle.php');
+session_start();
+
 $error = '';
 
+if (isset($_GET['nav']))
+	$nav = $_GET['nav'];
+else
+	$nav = 'nav';
+
+if (isset($_GET['navSection']))
+	$navSection = $_GET['navSection'];
+else
+	$navSection = 'log';
 
 if (isset($_GET['page']))
 	$page = $_GET['page'];
