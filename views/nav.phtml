@@ -1,12 +1,12 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="#">
+            <a class="brand" href="index.php?page=contact">
                 <img src="sources/img/logo1.jpg" alt="logo">
             </a>
             <ul class="nav pull-right">
                 <li class="divider-vertical dropdown">
-                    <?=require("apps/".$navSection.".php");?>
+                    <?php require("apps/".$navSection.".php");?>
                 </li>
                 <li class="divider-vertical">
                     <a href="index.php?page=panier">Panier</a>
@@ -24,12 +24,13 @@
                     <a href="index.php?page=store&section=list&search=platine">Platines</a>
                 </li>
                 <li class="divider-vertical dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="index.php?page=store&section=list&search=vinyle">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         Vinyles 
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <?=require("apps/categorie.php");?>
+                        <?php require("apps/categorie.php");?>
+                        <li><a href="index.php?page=store&section=list&search=vinyl">Tous</a></li>
                     </ul>
                 </li>
             </ul>  
