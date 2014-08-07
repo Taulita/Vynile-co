@@ -38,7 +38,7 @@
 
 <!--       Tableau des vinyles      -->
 <h3>Vinyls</h3>
-<table class="table" title="Item List">
+<table class="table" title="Vinyl List">
     <tr>
         <th>Article ID</th>
         <th>Artist</th>
@@ -88,18 +88,13 @@
 
 <h3>Platines</h3>
 
-<table class="table" title="Item List">
+<table class="table" title="Platine List">
     <tr>
         <th>Article ID</th>
-        <th>Artist</th>
         <th>Nom</th>
         <th>Year</th>
-        <th>Style</th>
         <th>Prix TTC</th>
-        <th>Tracks side A</th>
-        <th>Tracks side B</th>
-        <th>Label</th>
-        <th>Cover</th>
+        <th>Preview</th>
         <th>Stock</th>
         <th>Brand</th>
         <th>Technical Details</th>
@@ -110,19 +105,14 @@
     $i=0;
     while (isset($platines[$i])) {?>
     <tr>
-        <td><?=$clients[$i]->getId()?></td>
-        <td><?=$clients[$i]->getFirstName()?></td>
-        <td><?=$clients[$i]->getName()?></td>
-        <td><?=$clients[$i]->getEmail()?></td>
-        <td><?=$clients[$i]->getAddress()?></td>
-        <td><?=$clients[$i]->getVille()?></td>
-        <td><?=$clients[$i]->getCodePostal()?></td>
-        <td><?=$clients[$i]->getBirthdate()?></td>
-        <td><?=$clients[$i]->getIsAdmin()?></td>
-        <td><?=$clients[$i]->getIsAdmin()?></td>
-        <td><?=$clients[$i]->getIsAdmin()?></td>
-        <td><?=$clients[$i]->getIsAdmin()?></td>
-        <td><?=$clients[$i]->getIsAdmin()?></td>
+        <td><?=$platines[$i]->getId()?></td>
+        <td><?=$platines[$i]->getName()?></td>
+        <td><?=$platines[$i]->getBirthdate()?></td>
+        <td><?=$platines[$i]->getIsAdmin()?></td>
+        <td><?=$platines[$i]->getIsAdmin()?></td>
+        <td><?=$platines[$i]->getIsAdmin()?></td>
+        <td><?=$platines[$i]->getIsAdmin()?></td>
+        <td><?=$platines[$i]->getIsAdmin()?></td>
         <td><a href="#">Modify</a></td>
         <td><a href="#">Delete entry</a></td>
     </tr>
