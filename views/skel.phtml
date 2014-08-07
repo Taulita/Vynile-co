@@ -18,36 +18,39 @@
   <body>
 
     <div id="container-fluid" class="content page">
-      <div class="row-fluid">
+      
+      <header class="container">
+         <?php require('apps/header.php'); ?>
+      </header>
 
-            <div class="content span10">
-
-                <header class="container">
-                  <?php require('apps/header.php'); ?>
-                </header>
-
-                <nav class="container">
-                  <?php require('apps/nav.php'); ?>
-                </nav>
-
-                <section id="page" class='container'>
-                  <?php require('apps/'.$page.'.php'); ?>   
-                </section>
-                    
-                <footer class="container">
-                  <?php require('apps/footer.php'); ?>
-                </footer>
-
-            </div>
+      <nav class="container">
+        <?php require('apps/nav.php'); ?>
+      </nav>
           
-            <aside class="span2 aside">
-                <?php require('apps/aside.php'); ?> 
-            </aside>
+      <div class="row-fluid">
+        <div class="container span10">
+          <section id="page" class=''>
+            <?php require('apps/'.$page.'.php'); ?>   
+          </section>
+        </div>
+        <div class="ccontainer span2 aside">
+          <aside>
+           <?php require('apps/aside.php'); ?> 
+          </aside>
+        </div>
+      </div> 
 
-      </div>
+                    
+      <footer class="container">
+        <?php require('apps/footer.php'); ?>
+      </footer>
+
     </div> 
+
 	</body>
+
   <script src="sources/js/script.js"></script>
+  
 </html>
 
 
