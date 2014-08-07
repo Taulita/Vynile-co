@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Jeu 07 Août 2014 à 14:32
+-- Généré le :  Jeu 07 Août 2014 à 15:55
 -- Version du serveur :  5.5.34
 -- Version de PHP :  5.5.10
 
@@ -89,7 +89,6 @@ CREATE TABLE `t_user` (
 --
 
 INSERT INTO `t_user` (`id`, `email`, `nom`, `password`, `birthdate`, `address`, `codePostal`, `ville`, `admin`) VALUES
-(1, 'admin@admin.fr', '', 'troiswa', '0000-00-00', '', '', '', 1),
+(1, 'admin@admin.fr', 'Admin', '121542046ad3fb8d3f163d2987a92e02', '0000-00-00', '', '', '', 1),
 (2, 'taulita82@gmail.com', 'Taulita', '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00', '', '', '', 0),
 (3, 'john@mac.fr', 'John', '6531401f9a6807306651b87e44c05751', '0000-00-00', '', '', '', 0);
-
