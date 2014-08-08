@@ -27,7 +27,7 @@ while($i<sizeof($_SESSION['panier']))
 	}
 	$i++;
 }
-var_dump($TTC);
-$_SESSION['TotalTTC']=array_sum($TTC);
-$_SESSION['TotalHT']=array_sum($HT);
-$_SESSION['TotalTva']=array_sum($TVA);
+
+$_SESSION['TotalTTC']=number_format(array_sum($TTC),2, ","," ");
+$_SESSION['TotalHT']=number_format(array_sum($HT),2, ","," ");
+$_SESSION['TotalTva']=number_format(array_sum($TVA),2, ","," ");

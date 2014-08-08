@@ -12,17 +12,25 @@
 		<?php require('apps/articlePanier.php');?>
 	</tbody>
 </table>
-<table>
+<table class="table">
 	<tr>
-		<th>TOTAL HT</th>
-		<td><?=$_SESSION['TotalHT']?></td>
+		<th class="span5">TOTAL HT</th>
+		<td class="span2 text-right"><?=$_SESSION['TotalHT']?> &euro;</td>
 	</tr>
 	<tr>
-		<th>TOTAL TVA</th>
-		<td><?=$_SESSION['TotalTva']?></td>	
+		<th class="span5">TOTAL TVA</th>
+		<td class="span2 text-right"><?=$_SESSION['TotalTva']?> &euro;</td>	
 	</tr>
 	<tr>
-		<th>TOTAL TTC</th>
-		<td><?=$_SESSION['TotalTTC']?></td>
+		<th class="span5">TOTAL TTC</th>
+		<td class="span2 text-right"><?=$_SESSION['TotalTTC']?> &euro;</td>
 	</tr>
 </table>
+
+<div class="">
+	
+</div>
+
+<form class="pull-right" action="index.php?page=panier" method="POST">
+	<button class="btn btn-success" type="submit">Passer Commande</button>
+</form>

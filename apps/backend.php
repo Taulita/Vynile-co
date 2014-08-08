@@ -1,8 +1,8 @@
 <?php
 
-require('../models/user.class.php');
-require('../models/vynile.class.php');
-require('../sources/confphp/param.conf.php');
+require('models/user.class.php');
+require('models/vynile.class.php');
+require('sources/confphp/param.conf.php');
 #var_dump($_POST);
 
 //-----------------------GESTION DES CLIENTS------------------------//

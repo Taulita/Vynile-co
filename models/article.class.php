@@ -7,7 +7,7 @@ class Article
 	protected $img;
 	protected $annee;
 	protected $categorie;
-	protected $tauxTVA;
+	protected $tauxTVA=0.2;
 	protected $prixHT;
 	protected $prixTTC;
 	protected $tva;
@@ -16,12 +16,12 @@ class Article
 	protected $brefDescriptif;
 
 		
-	private function calculTVA()
+	protected function calculTVA()
 	{
 		$this->tva=$this->prixHT*$this->tauxTVA;
 	}
 
-	private function calculHT()
+	protected function calculHT()
 	{
 		$this->prixHT=$this->prixTTC/1.20;
 	}
