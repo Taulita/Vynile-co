@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 08 Août 2014 à 12:56
+-- Généré le: Ven 08 Août 2014 à 14:52
 -- Version du serveur: 5.5.37-0ubuntu0.14.04.1
 -- Version de PHP: 5.5.9-1ubuntu4
 
@@ -34,14 +34,15 @@ CREATE TABLE IF NOT EXISTS `requests` (
   `description` varchar(255) NOT NULL,
   `date_request` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `requests`
 --
 
 INSERT INTO `requests` (`id`, `artiste`, `titre`, `url`, `description`, `date_request`) VALUES
-(1, 'mj', 'man in the mirror', '', '', '2014-08-08 12:46:50');
+(1, 'mj', 'man in the mirror', '', '', '2014-08-08 12:46:50'),
+(2, 'med', 'life', '', '', '2014-08-08 13:00:47');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

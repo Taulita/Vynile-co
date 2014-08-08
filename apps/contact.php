@@ -5,10 +5,10 @@ $requetenvoyee = '';
 
 if (isset($_POST['artisteVoulu'], $_POST['titreVoulu'], $_POST['submitVoulu']))
 	{
-		$artisteVoulu = trim( mysqli_real_escape_string($_POST['artisteVoulu']));
-		$titreVoulu = trim(mysqli_real_escape_string($_POST['titreVoulu']));
-			$urlVoulu = trim(mysqli_real_escape_string($_POST['urlVoulu']));
-		$descriptionVoulu = trim(mysqli_real_escape_string($_POST['descriptionVoulu']));
+		$artisteVoulu = trim( mysqli_real_escape_string($db,$_POST['artisteVoulu']));
+		$titreVoulu = trim(mysqli_real_escape_string($db,$_POST['titreVoulu']));
+			$urlVoulu = trim(mysqli_real_escape_string($db,$_POST['urlVoulu']));
+		$descriptionVoulu = trim(mysqli_real_escape_string($db,$_POST['descriptionVoulu']));
 
 
 
