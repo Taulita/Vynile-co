@@ -1,6 +1,9 @@
 <?php
 require('models/vinyle.class.php');
 require('models/platine.class.php');
+$TTC= array();
+$HT= array();
+$TVA= array();
 $i=0;
 while($i<sizeof($_SESSION['panier']))
 {
@@ -17,7 +20,14 @@ while($i<sizeof($_SESSION['panier']))
 	}
 	while($article = mysqli_fetch_object($res, $obj))
 	{
-		require('views/articlePanier.phtml');
+		require('views/articlePanier.phtml');	
+		array_push($TTC, $article->getPrixTTC());
+		array_push($HT, $article->getPrixHT());
+		array_push($TVA, $article->getTva());	
 	}
 	$i++;
 }
+
+$_SESSION['TotalTTC']=number_format(array_sum($TTC),2, ","," ");
+$_SESSION['TotalHT']=number_format(array_sum($HT),2, ","," ");
+$_SESSION['TotalTva']=number_format(array_sum($TVA),2, ","," ");

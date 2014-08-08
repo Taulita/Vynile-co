@@ -51,15 +51,35 @@
         <th>Label</th>
         <th>Cover</th>
         <th>Stock</th>
-        <th>Brand</th>
         <th>Technical Details</th>
         <th>Modify</th>
         <th>Delete</th>
     </tr>
-    <?php
-    $i=0;
+    <?php $i=0;
     while (isset($vinyls[$i])) {?>
-    <tr>
+        <tr>        
+        <?php 
+
+        if (isset($_POST["modify-vinyl<?=$i?>"])) { ?>
+        
+<td><?=$vinyls[$i]->getId()?></td>
+<td><input name="artist" type="text" value="<?php $vinyls[$i]->getArtiste()?>"></td>
+<td><input name="name" type="text" value="<?php $vinyls[$i]->getNom()?>"></td>
+<td><input name="year" type="text" value="<?php $vinyls[$i]->getAnnee()?>"></td>
+<td><input name="style" type="text" value="<?php $vinyls[$i]->getStyle()?>"></td>
+<td><input name="prixTTC" type="text" value="<?php $vinyls[$i]->getPrixTTC()
+?>"></td>
+<td><input name="tracksA" type="text" value="<?php $vinyls[$i]->getTracksFaceA()?>"></td>
+<td><input name="tracksB" type="text" value="<?php $vinyls[$i]->getTracksFaceB()?>"></td>
+<td><input name="label" type="text" value="<?php $vinyls[$i]->getLabel()?>"></td>
+<td><img src="sources/img/vinyl_1680.jpg" width="50%"/></td>
+<td><input name="stock" type="text" value="<?php $vinyls[$i]->getStock()?>"></td>
+<td><input name="description" type="text" value="<?php $vinyls[$i]->getDescription()?>"></td>
+<td><input name="validate-vinyl<?=$i?>" type="submit" class="btn btn-warning" value="Valider" /></td>
+<td><a href="#">Delete entry</a></td>
+
+        <?php } else { ?>
+
         <td><?=$vinyls[$i]->getId()?></td>
         <td><?=$vinyls[$i]->getArtiste()?></td>
         <td><?=$vinyls[$i]->getNom()?></td>
@@ -69,17 +89,19 @@
         <td><?=$vinyls[$i]->getTracksFaceA()?></td>
         <td><?=$vinyls[$i]->getTracksFaceB()?></td>
         <td><?=$vinyls[$i]->getLabel()?></td>
-        <td><img src="../sources/img/vinyl_1680.jpg" width="50%"/></td>
+        <td><img src="sources/img/vinyl_1680.jpg" width="50%"/></td>
         <td><?=$vinyls[$i]->getStock()?></td>
-        <td><?=$vinyls[$i]->getMarque()?></td>
         <td><?=$vinyls[$i]->getDescription()?></td>
-        <td><a href="#">Modify</a></td>
+        <td>
+            <form method="POST" action="index.php?admin=ok">
+            <input name="modify-vinyl<?=$i?>" type="submit" class="btn btn-warning" value="Modify" />
+            </form>
+        </td>
         <td><a href="#">Delete entry</a></td>
+        <?php } ?>
+
     </tr>
-    <?php
-        $i++;
-    }
-    ?>
+    <?php $i++; } ?>
 </table>
 
 
@@ -101,23 +123,19 @@
         <th>Modify</th>
         <th>Delete</th>
     </tr>
-    <?php
-    $i=0;
-    while (isset($platines[$i])) {?>
-    <tr>
-        <td><?=$platines[$i]->getId()?></td>
-        <td><?=$platines[$i]->getName()?></td>
-        <td><?=$platines[$i]->getBirthdate()?></td>
-        <td><?=$platines[$i]->getIsAdmin()?></td>
-        <td><?=$platines[$i]->getIsAdmin()?></td>
-        <td><?=$platines[$i]->getIsAdmin()?></td>
-        <td><?=$platines[$i]->getIsAdmin()?></td>
-        <td><?=$platines[$i]->getIsAdmin()?></td>
-        <td><a href="#">Modify</a></td>
-        <td><a href="#">Delete entry</a></td>
-    </tr>
-    <?php
-        $i++;
-    }
-    ?>
+    <?php $i=0;
+        while (isset($platines[$i])) {?>
+            <tr>
+                <td><?=$platines[$i]->getId()?></td>
+                <td><?=$platines[$i]->getName()?></td>
+                <td><?=$platines[$i]->getBirthdate()?></td>
+                <td><?=$platines[$i]->getIsAdmin()?></td>
+                <td><?=$platines[$i]->getIsAdmin()?></td>
+                <td><?=$platines[$i]->getIsAdmin()?></td>
+                <td><?=$platines[$i]->getIsAdmin()?></td>
+                <td><?=$platines[$i]->getIsAdmin()?></td>
+                <td><a href="#">Modify</a></td>
+                <td><a href="#">Delete entry</a></td>
+            </tr>
+    <?php $i++; } ?>
 </table>

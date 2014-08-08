@@ -12,23 +12,23 @@ if(isset($_POST['panier']))
 	header("Location: ".$_SERVER['HTTP_REFERER']."");
 }
 
-if(isset($_POST['erase']))
+else if(isset($_POST['erase']))
 {
-	$i=0;
-	while($i<sizeof($_SESSION['panier']))
+	
+	$j=0;
+	$panier=array();	
+	while($j<sizeof($_SESSION['panier']))
 	{
-		$panier=array();	
-		if($_SESSION['panier'][$_POST['idErase']]);
-			
-		else
-			array_push($panier,$_SESSION['panier'][$i]);
-		$i++;
+		if($_SESSION['panier'][$j]!=$_SESSION['panier'][$_POST['idErase']])
+			array_push($panier,$_SESSION['panier'][$j]);
+		$j++;
 	}
-	var_dump($panier);
 	$_SESSION['panier']=$panier;
-	require('views/panier.phtml');
+	header("Location: index.php?page=panier");
+
 
 }
+
 else
 	require('views/panier.phtml');
 

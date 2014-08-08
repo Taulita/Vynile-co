@@ -11,6 +11,8 @@ class Vinyl extends Article
 	public function __construct()
 	{
 		$this->setCheminImg();
+		$this->calculHT();
+		$this->calculTVA();
 	}
 
 	private function setCheminImg()
