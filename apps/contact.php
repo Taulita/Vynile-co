@@ -31,8 +31,7 @@ if (isset($_POST['artisteVoulu'], $_POST['titreVoulu'], $_POST['submitVoulu']))
 				var_dump($request);
 				$requetenvoyee="Votre requête a bien été envoyée, nous reprendrons contact avec vous très prochainement!";
 				
-
-				require('views/accueil.phtml');
+				require('views/contact.phtml');
 			
 			}
 	}
