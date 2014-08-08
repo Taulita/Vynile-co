@@ -20,7 +20,7 @@
 <div class="row span8 offset2">
 	<p class="span6 text-center lead">Prix TCC : <?=$article['prixTTC']?> &euro;</p>
 		
-	<form class="span6"action="skel.php" method="POST">
+	<form class="span6" action="index.php?page=panier" method="POST">
 		<input type="hidden" name="id" value="<?=$article['id']?>" >
 		<button type="submit" name="info" class="btn btn-inverse">Ajouter au Panier</button>
 	</form>	

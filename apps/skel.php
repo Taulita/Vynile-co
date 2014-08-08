@@ -1,5 +1,5 @@
 <?php
-if (isset($_SESSION['admin']))
+if (isset($_SESSION['admin']) && isset($_GET['admin']))
 {
 	require('apps/backend.php');
 }
