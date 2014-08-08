@@ -5,6 +5,7 @@ require('models/vynile.class.php');
 require('sources/confphp/param.conf.php');
 #var_dump($_POST);
 
+
 //-----------------------GESTION DES CLIENTS------------------------//
 
 function getClients() {
@@ -59,7 +60,7 @@ function getPlatines() {
 	$password = "troiswa";
 	$db = mysqli_connect($server, $user, $password, $db_name);
 
-	$req = "SELECT * FROM t_articles WHERE categorie = 'platine'";
+	$req = "SELECT * FROM t_article WHERE categorie = 'platine'";
 	$res = mysqli_query($db, $req);
 	$platines = array();
 
@@ -73,7 +74,7 @@ function getPlatines() {
 
 $platines = getPlatines();
 
-require('../views/backend.phtml');
+require('views/backend.phtml');
 
 
 
