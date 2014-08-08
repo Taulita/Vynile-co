@@ -10,6 +10,7 @@ class Article
 	protected $tauxTVA;
 	protected $prixHT;
 	protected $prixTTC;
+	protected $tva;
 	protected $stock;
 	protected $vendu;
 	protected $brefDescriptif;
@@ -41,9 +42,9 @@ class Article
 	{
 		return $this->categorie;
 	}
-	public function getTauxTva()
+	public function getTva()
 	{
-		return $this->tauxTVA;
+		return $this->tva;
 	}
 
 	public function getPrixHT()
