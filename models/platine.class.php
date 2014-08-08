@@ -22,7 +22,7 @@ class Platine extends Article
 	}
 	public function getMarque()
 	{
-		return $this->label;
+		return $this->marque;
 	}
 	public function getCheminImg()
 	{
