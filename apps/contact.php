@@ -1,45 +1,48 @@
 <?php
 
+$error = '';
+$requetenvoyee = '';
 
 if (isset($_POST['artisteVoulu'], $_POST['titreVoulu'], $_POST['submitVoulu']))
 	{
-		$artisteVoulu = trim($_POST['artisteVoulu'];
-		$titreVoulu = trim($_POST['titreVoulu'];
-		$urlVoulu = trim($_POST['urlVoulu']);
-		$descripionVoulu = trim($_POST['descriptionVoulu'];
+		$artisteVoulu = trim( mysqli_real_escape_string($_POST['artisteVoulu']));
+		$titreVoulu = trim(mysqli_real_escape_string($_POST['titreVoulu']));
+			$urlVoulu = trim(mysqli_real_escape_string($_POST['urlVoulu']));
+		$descriptionVoulu = trim(mysqli_real_escape_string($_POST['descriptionVoulu']));
 
-		$error = '';
+
 
 		if (empty($artisteVoulu))
 			{
-				$error = "Êtes-vous sûr d'avoir entré le bon artiste que vous voudriez voir dans notre Store";.
+				$error = "Êtes-vous sûr d'avoir entré le bon artiste que vous voudriez voir dans notre Store";
 			}
 		else if (empty($titreVoulu))
 			{
-				$error = "Êtes-vous sûr d'avoir entré le bon titre que vous désirez trouver prochainement dans notre Store";.
+				$error = "Êtes-vous sûr d'avoir entré le bon titre que vous désirez trouver prochainement dans notre Store";
 			}
-		else if ($urlVoulu != '' && !filter_var($urlVoulu, FILTER_VALIDATE_URL))
+		else if ($urlVoulu != '' && !(filter_var($urlVoulu, FILTER_VALIDATE_URL)))
 			{
 				$error = "Url incorrecte";
 			}
 
-		else ($error == '')
+		else if ($error == '')
 			{
+				$request=mysqli_query($db,"INSERT INTO requests(artiste, titre, url, description, date_request) VALUES('".$artisteVoulu."','".$titreVoulu."','".$urlVoulu."','".$descriptionVoulu."',NOW())");
+				var_dump($request);
+				$requetenvoyee="Votre requête a bien été envoyée, nous reprendrons contact avec vous très prochainement!";
+				
 
-				$request=mysqli_query($db,"INSERT INTO requests(artiste, titre, url, description) VALUES('".$artisteVoulu.",".$titreVoulu.",".$urlVoulu.",".$descriptionVoulu."') ");
-
-				$res=mysqli_query($db,$request);
+				require('views/accueil.phtml');
+			
 			}
-
 	}
-
-
-$request=mysqli_query($db,"INSERT INTO requests(artiste, titre, url, description) VALUES('".$artisteVoulu.",".$titreVoulu.",".$urlVoulu.",".$descriptionVoulu."') ");
-
-$res=mysqli_query($db,$request);
+else
+	{
+		require('views/contact.phtml');
+	}
 
 	
 
-require('contact.phtml');
+
 
 ?>
