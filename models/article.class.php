@@ -4,24 +4,25 @@ class Article
 {
 	protected $id;
 	protected $nom;
+	protected $img;
 	protected $annee;
 	protected $categorie;
-	protected $marque;
 	protected $tauxTVA;
 	protected $prixHT;
 	protected $prixTTC;
 	protected $stock;
-	protected $description;
+	protected $vendu;
+	protected $brefDescriptif;
 
 		
-	private function calculTVA($prix)
+	private function calculTVA()
 	{
-		$this->tva=$prix*$this->tauxTVA;
+		$this->tva=$this->prixHT*$this->tauxTVA;
 	}
 
-	private function calculHT($prix)
+	private function calculHT()
 	{
-		$this->prixHT=$prix-$this->prix;
+		$this->prixHT=$this->prixTTC/1.20;
 	}
 
 	public function getId()
@@ -40,10 +41,6 @@ class Article
 	{
 		return $this->categorie;
 	}
-	public function getMarque()
-	{
-		return $this->marque;
-	}
 	public function getTauxTva()
 	{
 		return $this->tauxTVA;
@@ -56,7 +53,7 @@ class Article
 
 	public function getPrixTTC()
 	{
-		return $this->prixHT * $this->tauxTVA;
+		return $this->prixTTC;
 	}
 
 	public function getStock()
@@ -65,7 +62,15 @@ class Article
 	}
 	public function getDescription()
 	{
-		return $this->description;
+		return $this->brefDescriptif;
+	}
+	public function getImg()
+	{
+		return $this->img;
+	}
+	public function getVendu()
+	{
+		return $this->vendu;
 	}
 
 }

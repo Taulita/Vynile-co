@@ -5,7 +5,8 @@ body {
 	color: #500000;
 	margin: 0;
 	padding: 0;
-	/*background: #ffffff url(../../sources/img/vinyl_1680.jpg) no-repeat;*/
+	text-shadow: 1px 1px 1px grey;
+	background: #ffffff url(../../sources/img/vinyl_1680.jpg) no-repeat fixed;
 }
 
 .page {

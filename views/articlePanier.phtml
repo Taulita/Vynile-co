@@ -1,0 +1,13 @@
+<tr>
+	<td><img class='span10'src="<?=$article->getCheminImg()?>" alt="<?=$article->getNom()?>"></td>
+	<td class='span4'><?=$article->getNom()?></td>
+	<td class='span5'><?=$article->getDescription()?></td>
+	<td class="span2 text-right"><?=$article->getPrixTTC()?> &euro;</td>
+	<td>
+		<form action="index.php?page=panier" method="POST">
+			<input type="hidden" name="idErase" value='<?=$i?>'>
+			<input class="btn btn-warning"  type="submit" name='erase' value='Supprimer'>
+		</form>
+	</td>
+</tr>
+
