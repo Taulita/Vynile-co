@@ -9,6 +9,7 @@ $access="nav";
 $access1="navlogIn";
 $access2=["accueil", "store", "article", "panier", "LogIn"];
 $access3=["new","platine","vinyl","funk", "soul", "rock"];
+$access4=["addressConfirmPanier", "addressModifPanier"];
 
 if (isset($_GET['nav']))
 	$nav = $_GET['nav'];
@@ -35,6 +36,10 @@ if(isset($_GET['search']))
 else
 	$search ='';
 
+if(isset($_GET['sectionPanier']))
+	$sectionPanier = $_GET['sectionPanier'];
+else
+	$sectionPanier ='addressConfirmPanier';
 
 
 // if(isset($_GET['ajax']))

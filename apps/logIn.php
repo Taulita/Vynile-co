@@ -29,7 +29,7 @@ if (isset($_POST['submit']))
 			mysqli_query($db,$req);	
 			$_SESSION['login']= $user->getFirstName();
 			$_SESSION['id']= mysqli_insert_id($db);
-			header('Location: index.php?page=accueil');
+			header('Location: index.php?page=panier');
 				
 		}
 		else
