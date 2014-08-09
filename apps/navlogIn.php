@@ -35,7 +35,7 @@ if(isset ($_POST['email']) && isset ($_POST['password']))
 	}
 }
 
-else if (isset($_POST['f_out']))
+else if (isset($_GET['logOut']))
 {
 	session_destroy(); 
 	$_SESSION=array();
