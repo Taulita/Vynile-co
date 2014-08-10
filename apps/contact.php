@@ -1,5 +1,4 @@
 <?php
-
 $error = '';
 $requetenvoyee = '';
 
@@ -38,11 +37,5 @@ if(isset($_SESSION['id']))
 	require('views/requetContact.phtml');
 }
 else
-require('views/contact.phtml');
-
-
-	
-
-
-
+	require('views/contact.phtml');
 ?>

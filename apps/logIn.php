@@ -25,12 +25,10 @@ if (isset($_POST['submit']))
 					'".mysqli_real_escape_string($db, $user->getAddress())."',
 					'".mysqli_real_escape_string($db, $user->getCodePostal())."',
 					'".mysqli_real_escape_string($db, $user->getVille())."')";
-
 			mysqli_query($db,$req);	
 			$_SESSION['login']= $user->getFirstName();
 			$_SESSION['id']= mysqli_insert_id($db);
-			header('Location: index.php?page=panier');
-				
+			header("Location:".$_SERVER['HTTP_REFERER']."");		
 		}
 		else
 			$error="Certaines de vos donn&eacute;es sont incorrectes.";

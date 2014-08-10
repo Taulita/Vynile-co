@@ -4,4 +4,5 @@ $res=mysqli_query($db,$req);
 while($vinyle=mysqli_fetch_assoc($res))
 {
 	require('views/topVinyle.phtml');	
-}	
+}
+?>

@@ -9,7 +9,7 @@ else
 if(isset($_POST['panier']))
 {
 	array_push($_SESSION['panier'], $_POST['id']);
-	header("Location: ".$_SERVER['HTTP_REFERER']."");
+	header("Location:".$_SERVER['HTTP_REFERER']."");
 }
 
 else if(isset($_POST['erase']))
@@ -23,7 +23,7 @@ else if(isset($_POST['erase']))
 		$j++;
 	}
 	$_SESSION['panier']=$panier;
-	header("Location: index.php?page=panier");
+	header("Location:index.php?page=panier");
 }
 
 else if(isset($_POST['validate']))
@@ -48,5 +48,6 @@ else if(isset($_POST['modif']))
 
 else
 	require('views/panier.phtml');
+?>
 
 

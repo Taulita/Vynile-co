@@ -5,8 +5,7 @@ $error2="";
 $req="SELECT * FROM t_user WHERE id='".$idUser."'";
 $res=mysqli_query($db,$req);
 while($user = mysqli_fetch_object($res, "User"))
-{
-	
+{	
 	if(isset($_POST['submit']))
 	{
 		$user->AddressModif($_POST);
@@ -18,23 +17,13 @@ while($user = mysqli_fetch_object($res, "User"))
 			codePostal= '".mysqli_real_escape_string($db, $user->getCodePostal())."',
 			ville='".mysqli_real_escape_string($db, $user->getVille())."' WHERE id='".$idUser."'";
 			$res=mysqli_query($db,$req);
-			header('Location: index.php?page=confirmPanier&sectionPanier=addressConfirmPanier#address');
+			header('Location:index.php?page=confirmPanier&sectionPanier=addressConfirmPanier#address');
 		}
 		else
 		{
 			$error2="Vos informations sont incorrectes";
-
 		}		
 	}
-	require('views/addressModifPanier.phtml');
-	
+	require('views/addressModifPanier.phtml');	
 }
-
-
-
-
-
-
-
-
 ?>

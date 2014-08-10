@@ -7,7 +7,7 @@ $error = '';
 
 $access="nav";
 $access1="navlogIn";
-$access2=["accueil", "store", "article", "panier", "LogIn"];
+$access2=["accueil", "store", "panier","confirmPanier","commandeValide","commande", "LogIn", "article", "article2"];
 $access3=["new","platine","vinyl","funk", "soul", "rock"];
 $access4=["addressConfirmPanier", "addressModifPanier"];
 

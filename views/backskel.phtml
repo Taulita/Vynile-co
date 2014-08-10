@@ -19,26 +19,22 @@
 
     <div id="container-fluid" class="content page">
       
-      <nav class="container">
-        <?php require('apps/nav.php');?>
+     <!-- <nav class="container">
+        <?php //require('apps/backnav.php');?>
       </nav>
       
       <header class="container">
-         <?php require('apps/header.php');?>
-      </header>
+         <?php //require('apps/backheader.php');?>
+      </header>-->
    
-      <div class="row-fluid">
-        <div class="container span10">
-          <section id="page" class=''>
-            <?php require('apps/'.$page.'.php');?>   
-          </section>
-        </div>
-        <div class="ccontainer span2 aside">
-          <aside>
-           <?php require('apps/aside.php');?> 
-          </aside>
-        </div>
-      </div> 
+    
+      <div class="container span10">
+        <section id="page" class=''>
+          <?php require('apps/backend.php');?>   
+        </section>
+      </div>
+  
+     
 
                     
       <footer class="container">

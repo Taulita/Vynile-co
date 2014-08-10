@@ -6,5 +6,4 @@ while($user = mysqli_fetch_object($res, "User"))
 {
 	require('views/addressUserPanier.phtml');
 }
-
 ?>

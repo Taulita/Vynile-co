@@ -12,7 +12,6 @@ if(isset($_POST['paid']))
 	while($i<sizeof($_SESSION['panier']))
 	{
 		$req="UPDATE t_article SET stock=stock-1, vendu=vendu+1 WHERE id='".$_SESSION['panier'][$i]."'";
-		var_dump($req);
 		mysqli_query($db,$req);
 		$i++;
 	}
@@ -28,12 +27,8 @@ if(isset($_POST['paid']))
 	mysqli_query($db,$req);
 	$idCommande= mysqli_insert_id($db);
 	$_SESSION['panier']=array();
-	header('Location: index.php?page=commandeValide');
+	header('Location:index.php?page=commandeValide');
 }
 else
 	require('views/confirmPanier.phtml');
-
-
-
-
 ?>

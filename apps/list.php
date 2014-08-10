@@ -1,9 +1,6 @@
 <?php
 if(isset($_POST['search']))
 	$search=$_POST['search'];
-
-
-
 if($search=='platine')
 {
 	$req= "SELECT * FROM t_article WHERE categorie='".$search."' ORDER BY prixTTC ";
@@ -19,11 +16,8 @@ else if($search=='new')
 	$req= "SELECT * FROM t_article WHERE categorie='vinyl' ORDER BY id DESC LIMIT 1,10";
 	$res=mysqli_query($db,$req);
 	while($vinyle=mysqli_fetch_assoc($res))
-	{
 		require('views/vinyle.phtml');	
-	}
 }	
-
 
 else
 {
@@ -32,9 +26,7 @@ else
 	if(mysqli_num_rows($res)>0)
 	{
 		while($vinyle=mysqli_fetch_assoc($res))
-		{
-			require('views/vinyle.phtml');	
-		}		
+			require('views/vinyle.phtml');			
 	}
 	else
 	{
@@ -42,7 +34,5 @@ else
 		require('views/pasVendu.phtml');	
 		
 	}
-
 }
-
 ?>

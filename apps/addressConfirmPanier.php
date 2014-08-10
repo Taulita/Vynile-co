@@ -11,8 +11,4 @@ while($user = mysqli_fetch_object($res, "User"))
 	else
 		require('views/addressConfirmPanier.phtml');
 }
-
-
-
-
 ?>

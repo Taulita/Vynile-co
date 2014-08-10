@@ -7,5 +7,4 @@ while($article=mysqli_fetch_assoc($res))
 {
 	require("views/article2.phtml");
 }
-
 ?>

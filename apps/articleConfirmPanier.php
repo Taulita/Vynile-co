@@ -31,3 +31,4 @@ while($i<sizeof($_SESSION['panier']))
 $_SESSION['TotalTTC']=number_format(array_sum($TTC),2, ","," ");
 $_SESSION['TotalHT']=number_format(array_sum($HT),2, ","," ");
 $_SESSION['TotalTva']=number_format(array_sum($TVA),2, ","," ");
+?>
