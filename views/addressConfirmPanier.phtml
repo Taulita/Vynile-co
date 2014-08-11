@@ -1,0 +1,18 @@
+<form class="pull-right" action="index.php?page=confirmPanier&sectionPanier=addressModifPanier#address" method="POST">
+			<button class="btn btn-warning" type="submit" name="modif">Modifier</button>
+		</form>
+	<table class="table span8 offset2">
+		<thead>
+			<tr>
+				<th class="span1">Nom</th>
+				<th class="span1">Prénom</th>
+				<th class="span3">Adresse</th>
+				<th class="span2">Code Postal</th>
+				<th lass="span2">Ville</th>
+			</tr>
+		</thead>
+		<tbody >
+			<?php require('apps/addressUserPanier.php');?>
+		</tbody>
+	</table>
+

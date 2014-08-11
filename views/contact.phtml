@@ -1,30 +1,9 @@
-<div class="contact">
-	<p>
-		Vinyle &amp; Co<br>
-		Num&eacute;ro: 01 55 56 66 67<br>
-		Adresse: 6, rue de l'&eacute;v&ecirc;nement 75006 Paris<br>
-		Horaires: Du lundi au vendredi de 9h &agrave; 18h et le samedi de 10h &agrave; 19h.
-	</p>
+<div class="row">
+	<figure class="span10 offset1">
+		<img class="span4" src="sources/img/logo2.jpg?" alt="logo2">
+		<figcaption class="span7 offset1">
+			<h6>Vinyle &amp; Co</h6>
+			<p>Num&eacute;ro: 01 55 56 66 67<br>Adresse: 6, rue de l'&eacute;v&ecirc;nement 75006 Paris<br>Horaires: Du lundi au vendredi de 9h &agrave; 18h et le samedi de 10h &agrave; 19h.</p>
+		</figcaption>
+	</figure>
 </div>
-
-
-
-<form action="index.php?page=contact" method="POST" >
-
-<fieldset>		<legend>Produit non-propos&eacute; que vous d&eacute;sirer trouver</legend>
-			
-			<input type="text" name="artisteVoulu" placeholder="artiste.." required>
-			
-			<input type="text" name="titreVoulu" placeholder="titre.." required>
-			
-			<input type="text"name="urlVoulu" placeholder="Url..">
-			
-			<textarea name="descriptionVoulu" placeholder="description"></textarea>
-			
-			<input type="submit" name="submitVoulu" value="Envoyer">
-
-			<p><?=$requetenvoyee?></p>
-
-
-</fieldset>
-</form>

@@ -2,11 +2,8 @@
     Bonjour <?=$_SESSION['login']?>
     <b class="caret"></b>
 </a>
-<div class="dropdown-menu box">
-	
-	<form action="index.php?nav=nav&navSection=navlogIn" method="POST">
-		<input type="submit" name="f_out" value="LogOut" class="btn btn-mini btn-danger">
-	</form>
-	<a href="index.php?admin=ok"><button class="btn btn-mini btn-success">Entrer dans le BackOffice</button></a>
-
-</div>
+<ul class="dropdown-menu">
+	<li><a href="index.php?admin=ok">Entrer dans le BackOffice</a></li>
+    <li class="divider"></li>
+    <li><a href="index.php?nav=nav&navSection=navlogIn&logOut=yes">D&eacute;connexion</a></li>
+</ul>

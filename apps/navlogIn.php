@@ -28,14 +28,13 @@ if(isset ($_POST['email']) && isset ($_POST['password']))
 	}
 	else
 	{
-
 		$error="Vous n'	&ecirc;tes pas encore inscrit.";
 		require('views/navLogIn.phtml');
 
 	}
 }
 
-else if (isset($_POST['f_out']))
+else if (isset($_GET['logOut']))
 {
 	session_destroy(); 
 	$_SESSION=array();
@@ -49,8 +48,7 @@ else if (isset($_SESSION['id']))
 		require('views/navAdmin.phtml');	
 	}
 	else
-		require('views/navUser.phtml');
-	
+		require('views/navUser.phtml');	
 }
 
 else

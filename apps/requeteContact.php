@@ -25,17 +25,9 @@ if (isset($_POST['artisteVoulu'], $_POST['titreVoulu'], $_POST['submitVoulu']))
 	else if ($error == '')
 		{
 			$request=mysqli_query($db,"INSERT INTO requests(artiste, titre, url, description, date_request) VALUES('".$artisteVoulu."','".$titreVoulu."','".$urlVoulu."','".$descriptionVoulu."',NOW())");
-			var_dump($request);
-			$requetenvoyee="Votre requête a bien été envoyée, nous reprendrons contact avec vous très prochainement!";	
+			$requetenvoyee="Votre requête a bien été envoyée, nous reprendrons contact avec vous très prochainement!";
 		}
 }
 
-
-if(isset($_SESSION['id']))
-{
-	require('views/contact.phtml');
-	require('views/requetContact.phtml');
-}
-else
-	require('views/contact.phtml');
+require('views/requetContact.phtml');
 ?>

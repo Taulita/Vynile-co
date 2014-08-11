@@ -12,6 +12,8 @@ class Vinyl extends Article
 	{
 		$this->categorie='Vinyle';
 		$this->setCheminImg();
+		$this->calculHT();
+		$this->calculTVA();
 	}
 	private function setCheminImg()
 	{
