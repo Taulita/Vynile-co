@@ -3,6 +3,7 @@ $error = '';
 $requetenvoyee = '';
 
 if (isset($_POST['artisteVoulu'], $_POST['titreVoulu'], $_POST['submitVoulu']))
+
 {
 	$artisteVoulu = trim( mysqli_real_escape_string($db,$_POST['artisteVoulu']));
 	$titreVoulu = trim(mysqli_real_escape_string($db,$_POST['titreVoulu']));
@@ -36,6 +37,7 @@ if(isset($_SESSION['id']))
 	require('views/contact.phtml');
 	require('views/requetContact.phtml');
 }
+
 else
 	require('views/contact.phtml');
 ?>

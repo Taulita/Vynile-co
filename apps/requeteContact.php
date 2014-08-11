@@ -2,8 +2,9 @@
 $error = '';
 $requetenvoyee = '';
 
-if (isset($_POST['artisteVoulu'], $_POST['titreVoulu'], $_POST['submitVoulu']))
-{
+if (isset($_POST['artisteVoulu'] || $_POST['titreVoulu'] || $_POST['urlVoulu'] || $_POST['descriptionVoulu'] ))
+{	
+	$idClient = $_SESSION["id"];
 	$artisteVoulu = trim( mysqli_real_escape_string($db,$_POST['artisteVoulu']));
 	$titreVoulu = trim(mysqli_real_escape_string($db,$_POST['titreVoulu']));
 	$urlVoulu = trim(mysqli_real_escape_string($db,$_POST['urlVoulu']));
@@ -24,7 +25,7 @@ if (isset($_POST['artisteVoulu'], $_POST['titreVoulu'], $_POST['submitVoulu']))
 
 	else if ($error == '')
 		{
-			$request=mysqli_query($db,"INSERT INTO requests(artiste, titre, url, description, date_request) VALUES('".$artisteVoulu."','".$titreVoulu."','".$urlVoulu."','".$descriptionVoulu."',NOW())");
+			$request=mysqli_query($db,"INSERT INTO requests(artiste, titre, url, description, date_request, id_client) VALUES('".$artisteVoulu."','".$titreVoulu."','".$urlVoulu."','".$descriptionVoulu."',NOW(), '".$idClient."')");
 			$requetenvoyee="Votre requête a bien été envoyée, nous reprendrons contact avec vous très prochainement!";
 		}
 }

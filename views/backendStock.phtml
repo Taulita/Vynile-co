@@ -20,9 +20,10 @@
     while (isset($vinyls[$i])) { ?>
 
     
-    <tr class="defaulthidden">        
-
-<td><?=$vinyls[$i]->getId()?></td>
+    <tr class="togglemodvinyls defaulthidden">        
+<form name="formmodifyvinyl" action="index.php?admin=ok&backendpage=backendStock" method="POST">
+<td><?=$vinyls[$i]->getId()?>
+    <input type="hidden" name="id" type="text" value="<?=$vinyls[$i]->getId()?>"></td>
 <td><input name="artist" type="text" value="<?=$vinyls[$i]->getArtiste()?>"></td>
 <td><input name="name" type="text" value="<?=$vinyls[$i]->getNom()?>"></td>
 <td><input name="year" type="text" value="<?=$vinyls[$i]->getAnnee()?>"></td>
@@ -32,17 +33,17 @@
 <td><input name="tracksA" type="text" value="<?=$vinyls[$i]->getTracksFaceA()?>"></td>
 <td><input name="tracksB" type="text" value="<?=$vinyls[$i]->getTracksFaceB()?>"></td>
 <td><input name="label" type="text" value="<?=$vinyls[$i]->getLabel()?>"></td>
-<td><img src="sources/img/vinyl_1680.jpg" width="50%"/></td>
+<td><input name="cover" type="image" value="<?=$vinyls[$i]->GetCheminImg()?>"></td>
 <td><input name="stock" type="text" value="<?=$vinyls[$i]->getStock()?>"></td>
 <td><input name="description" type="text" value="<?=$vinyls[$i]->getDescription()?>"></td>
-<td><input name="validate-vinyl<?=$i?>" type="submit" class="btn btn-warning" value="Valider" /></td>
-<td><a href="#">Delete entry</a></td>
-
+<td><input name="validate-vinyls" type="submit" class="btn" value="Valider" /></td>
+<td><input name="delete-vinyl" type="button" class="btn btn-warning" value="Delete Entry" /></td>
+</form>
     </tr>
     
 
    
-    <tr class="defaultblock">
+    <tr class="togglemodvinyls">
         <td><?=$vinyls[$i]->getId()?></td>
         <td><?=$vinyls[$i]->getArtiste()?></td>
         <td><?=$vinyls[$i]->getNom()?></td>
@@ -52,15 +53,14 @@
         <td><?=$vinyls[$i]->getTracksFaceA()?></td>
         <td><?=$vinyls[$i]->getTracksFaceB()?></td>
         <td><?=$vinyls[$i]->getLabel()?></td>
-        <td><img src="sources/img/vinyl_1680.jpg" width="50%"/></td>
-        <td><?=$vinyls[$i]->getStock()?></td>
+        <td><?=$vinyls[$i]->getLabel()?></td>
+        <td><img src="<?=$vinyls[$i]->GetCheminImg()?>"></td>
         <td><?=$vinyls[$i]->getDescription()?></td>
         <td>
-            <form method="POST" action="index.php?admin=ok">
-            <input name="modify-vinyl<?=$i?>" type="submit" class="btn btn-warning" value="Modify" />
-            </form>
+            
+                <input name="modify-vinyls" type="button" class="btn modifyvinyls" value="Modify" />
         </td>
-        <td><a href="#">Delete entry</a></td>
+        <td><input name="delete-vinyl" type="button" class="btn btn-warning" value="Delete Entry" /></td>
     </tr>
 
 
