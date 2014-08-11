@@ -51,7 +51,7 @@ WHERE id = '".$_POST["id"]."'";
 
 mysqli_query($db, $req3);
 }
-var_dump($_POST);
+
 
 if (isset($_POST["delete-platine"])) {
 
