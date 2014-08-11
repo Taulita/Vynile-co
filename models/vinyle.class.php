@@ -10,13 +10,14 @@ class Vinyl extends Article
 
 	public function __construct()
 	{
+		$this->categorie='Vinyle';
 		$this->setCheminImg();
 	}
-
 	private function setCheminImg()
 	{
 		$this->cheminImg='sources/img/album/'.$this->img.'.jpg';
 	}
+
 
 	public function getArtiste()
 	{
@@ -42,11 +43,12 @@ class Vinyl extends Article
 	{
 		return $this->label;
 	}
-	
 	public function getCheminImg()
 	{
 		return $this->cheminImg;
 	}
+	
+
 
 
 }
