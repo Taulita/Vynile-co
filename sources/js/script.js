@@ -23,5 +23,5 @@ $(".modifyvinyls").click(function(){
 
 
 $(".modifyplatines").click(function(){
-  $(".togglemodpaltines").toggleClass("defaulthidden");
+  $(".togglemodplatines").toggleClass("defaulthidden");
 });
