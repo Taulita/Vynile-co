@@ -1,5 +1,9 @@
 <?php
 
+require('models/user.class.php');
+require('models/platine.class.php');
+require('models/vinyle.class.php');
+
 if (isset($_POST['artist'], $_POST['name'], $_POST['style'], $_POST['cover'], $_POST['description'], $_POST['prixTTC'], $_POST['stock'], $_POST['year'], $_POST['label'], $_POST['tracksA'], $_POST['tracksB'])) { 
 
 $req = "UPDATE t_article SET
@@ -18,11 +22,6 @@ WHERE id = '".$_POST["id"]."'";
 
 mysqli_query($db, $req);
 }
-
-
-require('models/user.class.php');
-require('models/platine.class.php');
-require('models/vinyle.class.php');
 
 
 
@@ -74,6 +73,14 @@ function getPlatines($db) {
 $platines = getPlatines($db);
 
 
+
+if (isset($_POST["delete-vinyl"])) {
+
+$req2 = "DELETE FROM t_article WHERE id = '".$_POST['id']."'";
+
+mysqli_query($db,$req2);
+
+}
 
 
 require('views/backendStock.phtml');

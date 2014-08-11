@@ -56,11 +56,13 @@
         <td><?=$vinyls[$i]->getLabel()?></td>
         <td><img src="<?=$vinyls[$i]->GetCheminImg()?>"></td>
         <td><?=$vinyls[$i]->getDescription()?></td>
+        <td><input name="modify-vinyls" type="button" class="btn modifyvinyls" value="Modify" /></td>
         <td>
-            
-                <input name="modify-vinyls" type="button" class="btn modifyvinyls" value="Modify" />
-        </td>
-        <td><input name="delete-vinyl" type="button" class="btn btn-warning" value="Delete Entry" /></td>
+            <form action="index.php?admin=ok&backendpage=backendStock" method="POST">
+                <input name="delete-vinyl" type="submit" class="btn btn-warning" value="Delete Entry" />
+                <input type="hidden" name='id' value='<?=$vinyls[$i]->getId()?>'>
+            </td>
+            </form>
     </tr>
 
 
