@@ -84,7 +84,7 @@ require('views/backend.phtml');
 
 
 
-//-----------------------GESTION DES ARTICLES------------------------//
+
 
 
 
