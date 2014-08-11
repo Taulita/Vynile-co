@@ -15,3 +15,7 @@
 
 
 //
+
+$(".modifyvinyls").click(function(){
+  $(".togglemodvinyls").toggleClass("defaulthidden");
+});
