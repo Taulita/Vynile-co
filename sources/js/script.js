@@ -19,3 +19,9 @@
 $(".modifyvinyls").click(function(){
   $(".togglemodvinyls").toggleClass("defaulthidden");
 });
+
+
+
+$(".modifyplatines").click(function(){
+  $(".togglemodpaltines").toggleClass("defaulthidden");
+});

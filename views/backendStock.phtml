@@ -61,11 +61,50 @@
             <form action="index.php?admin=ok&backendpage=backendStock" method="POST">
                 <input name="delete-vinyl" type="submit" class="btn btn-warning" value="Delete Entry" />
                 <input type="hidden" name='id' value='<?=$vinyls[$i]->getId()?>'>
-            </td>
             </form>
+            </td>
     </tr>
 
 
 
+    <?php $i++; } ?>
+</table>
+
+<!--       Tableau des platines       -->
+
+
+<h3>Platines</h3>
+
+<table class="table" title="Platine List">
+    <tr>
+        <th>Article ID</th>
+        <th>Nom</th>
+        <th>Year</th>
+        <th>Prix TTC</th>
+        <th>Preview</th>
+        <th>Stock</th>
+        <th>Brand</th>
+        <th>Technical Details</th>
+        <th>Modify</th>
+        <th>Delete</th>
+    </tr>
+    <?php $i=0;
+        while (isset($platines[$i])) {?>
+            <tr>
+                <td><?=$platines[$i]->getId()?></td>
+                <td><?=$platines[$i]->getNom()?></td>
+                <td><?=$platines[$i]->getAnnee()?></td>
+                <td><?=$platines[$i]->getPrixTTC()?></td>
+                <td><?=$platines[$i]->getDescription()?></td>
+                <td><?=$platines[$i]->getStock()?></td>
+                <td><?=$platines[$i]->getMarque()?></td>
+                <td><?=$platines[$i]->getFicheTechnique()?></td>
+                <td>
+                    <form action="index.php?admin=ok&backendpage=backendStock" method="POST">
+                <input name="delete-platine" type="submit" class="btn btn-warning" value="Delete Entry" />
+                <input type="hidden" name='id' value='<?=$platines[$i]->getId()?>'>
+            </form>
+                </td>
+            </tr>
     <?php $i++; } ?>
 </table>
