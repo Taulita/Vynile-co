@@ -12,4 +12,3 @@ else if (isset($_SESSION['admin']) && isset($_GET['admin']))
 }
 else
 	require("views/skel.phtml");
-?>
