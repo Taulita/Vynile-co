@@ -7,7 +7,7 @@ if (isset($_POST['artisteVoulu'], $_POST['titreVoulu'], $_POST['submitVoulu']))
 	{
 		$artisteVoulu = trim( mysqli_real_escape_string($db,$_POST['artisteVoulu']));
 		$titreVoulu = trim(mysqli_real_escape_string($db,$_POST['titreVoulu']));
-			$urlVoulu = trim(mysqli_real_escape_string($db,$_POST['urlVoulu']));
+		$urlVoulu = trim(mysqli_real_escape_string($db,$_POST['urlVoulu']));
 		$descriptionVoulu = trim(mysqli_real_escape_string($db,$_POST['descriptionVoulu']));
 
 
