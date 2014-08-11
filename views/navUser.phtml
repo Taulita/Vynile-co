@@ -2,8 +2,9 @@
     Bonjour <?=$_SESSION['login']?>
     <b class="caret"></b>
 </a>
-<div id="logInForm" class="dropdown-menu box">
-	<form action="index.php?nav=nav&navSection=navlogIn" method="POST">
-		<input type="submit" name="f_out" value="LogOut" class="btn btn-mini btn-danger">
-	</form>
-</div>
+<ul class="dropdown-menu">
+    <li><a href="index.php?page=commande">Suivi de Commande</a></li>
+    <li><a href="index.php?page=contact">Demande Particuli&egrave;re</a></li>
+    <li class="divider"></li>
+    <li><a href="index.php?nav=nav&navSection=navlogIn&logOut=yes">D&eacute;connexion</a></li>
+</ul>

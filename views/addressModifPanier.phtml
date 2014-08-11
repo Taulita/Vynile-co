@@ -1,0 +1,28 @@
+<div class="span6 offset2">
+	<div>
+    	<strong><?=$error2?></strong> 
+    </div>
+	<form class="form-horizontal" action="index.php?page=confirmPanier&sectionPanier=addressModifPanier" method="POST">
+		<div class="control-group">
+			<label class="control-label" for="nom"><i class="fa fa-user fa-fw"></i></label>
+			<div class="controls">
+				<input class="input-block-level" type="text" name="nom" placeholder="Nom" value="<?=htmlentities($user->getName())?>" />
+				<input class="input-block-level" type="text" name="prenom" placeholder="Pr&eacute;nom" value="<?=htmlentities($user->getFirstName())?>"/>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="address"><i class="fa fa-home fa-fw"></i></label>
+			<div class="controls">
+				<input class="input-block-level" type="text" name="address" placeholder="Adresse" value="<?=htmlentities($user->getAddress())?>"/>
+				<input class="input-block-level" type="text" name="code" placeholder="Code Postal" value="<?=htmlentities($user->getCodePostal())?>"/>
+				<input class="input-block-level" type="text" name="ville" placeholder="Ville" value="<?=htmlentities($user->getVille())?>"/>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" name="submit"value="Validate" />
+			</div>
+		</div>
+
+	</form>
+</div>

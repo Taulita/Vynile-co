@@ -1,0 +1,20 @@
+<dl class="dl-horizontal">
+    <dt>Date de Commande</dt>
+    <dd><?=$dateCommande?></dd>
+    <dt>Articles Commandés</dt>
+    <dd>
+    	<ul class="unstyled inline">
+    		<?php require('apps/articlesCommande.php');?>
+    	</ul>	
+    	<p>Pour un total de : <strong><?=$TTCCommande?> &euro;</strong></p>
+    </dd>
+    <dt>Adresse de Livraison</dt>
+    <dd>
+    	<p><?=$nomCommande?> <?=$prenomCommande?></p>
+    	<p><?=$addressCommande?></p>
+    	<p><?=$CPCommande?> <?=$villeCommande?></p>
+    </dd>
+    <dt>Etat de la Livraison</dt>
+    <dd><?=$livreeCommande?></dd>
+   
+</dl>

@@ -32,6 +32,21 @@ class User
 		}
 	}
 	
+	//FONCTION MODIFICATION//
+
+	public function AddressModif($post=array())
+	{
+		if (isset($post['nom'], $post['prenom'], $post['address'],$post['code'], $post['ville'] ))
+			{
+				$this->setName($post['nom']);
+				$this->setFirstName($post['prenom']);
+				$this->setAddress($post['address']);
+				$this->setCodePostal($post['code']);
+				$this->setVille($post['ville']);
+			}
+			else
+				$this->error = true;
+	}
 
 	// FONCTION SETTER//
 	private function setName($nom)

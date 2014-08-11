@@ -31,8 +31,5 @@ class Platine extends Article
 	{
 		return $this->cheminImg;
 	}
-	
-
-
 
 }

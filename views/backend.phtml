@@ -58,9 +58,6 @@
     <?php $i=0;
     while (isset($vinyls[$i])) {?>
         <tr>        
-        <?php 
-
-        if (isset($_POST["modify-vinyl<?=$i?>"])) { ?>
         
 <td><?=$vinyls[$i]->getId()?></td>
 <td><input name="artist" type="text" value="<?php $vinyls[$i]->getArtiste()?>"></td>
@@ -78,7 +75,6 @@
 <td><input name="validate-vinyl<?=$i?>" type="submit" class="btn btn-warning" value="Valider" /></td>
 <td><a href="#">Delete entry</a></td>
 
-        <?php } else { ?>
 
         <td><?=$vinyls[$i]->getId()?></td>
         <td><?=$vinyls[$i]->getArtiste()?></td>

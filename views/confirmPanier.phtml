@@ -1,0 +1,55 @@
+<h4 class='text-center span12'>Vos Achats</h4>
+<div class="row">
+	<form class="pull-right" action="index.php?page=panier" method="POST">
+		<button class="btn btn-warning" type="submit" name="modif">Modifier</button>
+	</form>
+	<table class="table span8 offset2">
+		<thead>
+			<tr>
+				<th class='span4 offset2'></th>
+				<th class='span4'>Article</th>
+				<th class="span2 text-right">Prix</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php require('apps/articleConfirmPanier.php');?>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th class='span4 offset2'>TOTAL HT</th>
+				<td class='span4'></td>
+				<td class="span2 text-right lead"><?=$_SESSION['TotalHT']?> &euro;</td>
+			</tr>
+			<tr>
+				<th class='span4 offset2'>TOTAL TVA</th>
+				<td class='span4'></td>
+				<td class="span2 text-right lead"><?=$_SESSION['TotalTva']?> &euro;</td>	
+			</tr>
+			<tr>
+				<th class='span4 offset2'>TOTAL TTC</th>
+				<td class='span4'></td>
+				<td class="span2 text-right lead"><?=$_SESSION['TotalTTC']?> &euro;</td>
+			</tr>
+		</tfoot>
+	</table>
+	<table class="table span8 offset2">
+		
+	</table>
+</div>
+
+<div id='address' class="row">
+
+	<h4 class='text-center span12'> Votre Adresse de Livraison</h4>
+		<?php require('apps/'.$sectionPanier.'.php');?>
+		
+</div>
+
+<div class="row">
+	<h4 class='text-center span12'>Vos Coordonn&eacute;es Bancaires</h4>
+	<form class="pull-right" action="index.php?page=confirmPanier" method="POST">
+		<button class="btn btn-inverse" type="submit" name="paid">Payer</button>
+	</form>
+	<p class="span8 offset2">Syteme Baincaire - gerer par les banques</p>
+</div>
+
+
