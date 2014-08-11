@@ -1,25 +1,52 @@
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">  
-            <img class='span1' src="sources/img/logo1.jpg" alt="logo">
-             
-            <ul class="nav">
-                <li class="divider-vertical">
-                    <a href="index.php?backendpage=backendOrder">Commandes Client</a>
-                </li>
-                <li class="divider-vertical">
-                    <a href="index.php?backendpage=backendStock">Gestion des Stocks</a>
-                </li>
-                <li class="divider-vertical">
-                    <a href="index.php?backendpage=backendClient">Client</a>
-                </li>
-                <li class="divider-vertical">
-                    <a href="index.php?backendpage=backendAdmin">Gestion des Droits</a>
-                </li>
-                <li><a href="index.php?logOut=yes">D&eacute;connexion</a></li>
-            </ul>  
-           
-        </div>
-    </div>
+<h4>Liste des Administrateurs du Site</h4>
+<div class="span8 offset2">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Pr&eacute;nom</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <?php require('apps/backendListAdmin.php');?>
+            
+        </tbody>
+    </table>
 </div>
 
+<h4>Ajouter un nouvel adminitrateur</h4>
+<div class="span8 offset2">
+    <div>
+        <strong><?=$error?></strong> 
+    </div>
+    <form class="form-horizontal" action="index.php?admin=ok&backendpage=backendAdmin" method="POST">
+        <div class="control-group">
+            <label class="control-label" for="nom"><i class="fa fa-user fa-fw"></i></label>
+            <div class="controls">
+                <input class="input-block-level" type="text" name="nom" placeholder="Nom"/>
+                <input class="input-block-level" type="text" name="prenom" placeholder="Pr&eacute;nom"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="email"><i class="fa fa-envelope-o fa-fw"></i></label>
+            <div class="controls">
+                <input class="input-block-level" type="email" name="email" placeholder="Email"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="password"><i class="fa fa-lock fa-fw"></i></label>
+            <div class="controls">
+                <input class="input-block-level" type="password" name="password" placeholder="Mot de Passe"/>
+                <!--<input class="input-block-level" type="password" name="configpassword" placeholder="Confirmer votre mot de Passe"/>-->
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <input type="submit" name="submit" value="Validate" />
+            </div>
+        </div>
+
+    </form>
+</div>

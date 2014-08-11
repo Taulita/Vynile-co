@@ -1,0 +1,24 @@
+<tr>
+	<td><?=$nom?></td>
+	<td><?=$prenom?></td>
+	<td><?=$email?></td>
+	<td><?=$artiste?></td>
+	<td><?=$titre?></td>
+	<td><?=$url?></td>
+	<td><?=$description?></td>
+	<td><?=$date?></td>
+	<td><a href="mailto:<?=$email?>"><button class="btn btn-inverse">Répondre</button></a></td>
+<form name='traite' action="index.php?admin=ok&backendpage=backendClient" methode='POST'>
+	<td><input id='traite' type="checkbox" name="traite" value='1'<?=$check?> >
+		<input type="hidden" name='id' value='<?=$id?>'>
+	</td>
+</form>
+</tr>
+
+
+<script>
+	$('#traite').on('click', function()
+	{
+		document.forms["traite"].submit();
+	});
+</script>
