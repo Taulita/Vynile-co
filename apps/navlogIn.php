@@ -34,13 +34,6 @@ if(isset ($_POST['email']) && isset ($_POST['password']))
 	}
 }
 
-else if (isset($_GET['logOut']))
-{
-	session_destroy(); 
-	$_SESSION=array();
-	require('views/navLogIn.phtml');
-}
-
 else if (isset($_SESSION['id']))
 {
 	if (isset($_SESSION['admin']))			

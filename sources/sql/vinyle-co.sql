@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 11, 2014 at 02:42 PM
+-- Generation Time: Aug 11, 2014 at 04:19 PM
 -- Server version: 5.5.37-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4
 
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `requests` (
 --
 
 INSERT INTO `requests` (`id`, `artiste`, `titre`, `url`, `description`, `date_request`, `id_client`, `date_traite`, `traite`) VALUES
-(1, 'mj', 'man in the mirror', '', '', '2014-08-08 12:46:50', 2, '0000-00-00 00:00:00', 0),
+(1, 'mj', 'man in the mirror', '', '', '2014-08-08 12:46:50', 2, '0000-00-00 00:00:00', 1),
 (2, 'med', 'life', '', '', '2014-08-08 13:00:47', 3, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `t_user` (
   `admin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `t_user`
@@ -165,7 +165,8 @@ INSERT INTO `t_user` (`id`, `email`, `name`, `firstname`, `password`, `birthdate
 (12, 'gkjdgk@jgkndg.fr', 'dhdfhs', 'hsdhsfs', '74524b79805db0aebf4a13f6830e62f5', '1982-02-11', 'fbhzdfb', '45000', 'fdhsdfh', 0),
 (13, 'dfbsdbsdfb@gkjdh.fr', 'jkghfkgja', 'sbdfbsdfb', '37e790480e2d53aa3365d6ab4c3d28dc', '1988-07-10', 'dbfzzdb', '45000', 'dfbssbfs', 0),
 (14, 'math@smith.fr', 'hifash', 'Mathilde', '0b666708ca0393f13490de7cdec792a0', '1970-01-01', '45, rue fdggsdfga', '75001', 'Paris', 0),
-(15, 'medhi@mma.fr', 'MMA', 'Medhi', '121542046ad3fb8d3f163d2987a92e02', '0000-00-00', '', '', '', 1);
+(15, 'medhi@mma.fr', 'MMA', 'Medhi', '121542046ad3fb8d3f163d2987a92e02', '0000-00-00', '', '', '', 1),
+(16, 'medhimma@free.fr', 'MMA', 'Medhi', '827ccb0eea8a706c4c34a16891f84e7b', '1955-12-12', '25, rue de la Fable', '75001', 'Paris', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
