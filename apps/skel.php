@@ -1,7 +1,7 @@
 <?php
 if (isset($_SESSION['admin']) && isset($_GET['admin']))
 {
-	require('views/backskel.phtml');
+	require('views/backendskel.phtml');
 }
 else
 	require("views/skel.phtml");
