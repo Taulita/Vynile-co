@@ -1,17 +1,17 @@
 <?php
-require('../models/user.class.php');
-require('../models/platine.class.php');
-require('../models/vinyle.class.php');
-require('../sources/confphp/param.conf.php');
+require('models/user.class.php');
+require('models/platine.class.php');
+require('models/vinyle.class.php');
 
 
 
-function getVinyls() {
-	$server = "localhost";
-	$db_name = "vinyle-co";
-	$user = "root";
-	$password = "troiswa";
-	$db = mysqli_connect($server, $user, $password, $db_name);
+
+function getVinyls($db) {
+	// $server = "localhost";
+	// $db_name = "vinyle-co";
+	// $user = "root";
+	// $password = "troiswa";
+	// $db = mysqli_connect($server, $user, $password, $db_name);
 
 	$req = "SELECT * FROM t_article WHERE categorie = 'vinyl'";
 	$res = mysqli_query($db, $req);
@@ -25,17 +25,17 @@ function getVinyls() {
 
 }
 
-$vinyls = getVinyls();
+$vinyls = getVinyls($db);
 
 
 //-----------------------GESTION DES PLATINES------------------------//
 
-function getPlatines() {
-	$server = "localhost";
-	$db_name = "vinyle-co";
-	$user = "root";
-	$password = "troiswa";
-	$db = mysqli_connect($server, $user, $password, $db_name);
+function getPlatines($db) {
+	// $server = "localhost";
+	// $db_name = "vinyle-co";
+	// $user = "root";
+	// $password = "troiswa";
+	// $db = mysqli_connect($server, $user, $password, $db_name);
 
 	$req = "SELECT * FROM t_article WHERE categorie = 'platine'";
 	$res = mysqli_query($db, $req);
@@ -50,6 +50,6 @@ function getPlatines() {
 }
 
 
-$platines = getPlatines();
+$platines = getPlatines($db);
 
-require('../views/backendStock.phtml');
+require('views/backendStock.phtml');

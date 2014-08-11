@@ -18,8 +18,10 @@
     </tr>
     <?php $i=0;
     while (isset($vinyls[$i])) { ?>
-    <tr>        
-        
+
+    
+    <tr class="defaulthidden">        
+
 <td><?=$vinyls[$i]->getId()?></td>
 <td><input name="artist" type="text" value="<?=$vinyls[$i]->getArtiste()?>"></td>
 <td><input name="name" type="text" value="<?=$vinyls[$i]->getNom()?>"></td>
@@ -30,15 +32,17 @@
 <td><input name="tracksA" type="text" value="<?=$vinyls[$i]->getTracksFaceA()?>"></td>
 <td><input name="tracksB" type="text" value="<?=$vinyls[$i]->getTracksFaceB()?>"></td>
 <td><input name="label" type="text" value="<?=$vinyls[$i]->getLabel()?>"></td>
-<td><img src="../sources/img/vinyl_1680.jpg" width="50%"/></td>
+<td><img src="sources/img/vinyl_1680.jpg" width="50%"/></td>
 <td><input name="stock" type="text" value="<?=$vinyls[$i]->getStock()?>"></td>
 <td><input name="description" type="text" value="<?=$vinyls[$i]->getDescription()?>"></td>
 <td><input name="validate-vinyl<?=$i?>" type="submit" class="btn btn-warning" value="Valider" /></td>
 <td><a href="#">Delete entry</a></td>
+
     </tr>
+    
 
-    <tr>
-
+   
+    <tr class="defaultblock">
         <td><?=$vinyls[$i]->getId()?></td>
         <td><?=$vinyls[$i]->getArtiste()?></td>
         <td><?=$vinyls[$i]->getNom()?></td>
@@ -48,7 +52,7 @@
         <td><?=$vinyls[$i]->getTracksFaceA()?></td>
         <td><?=$vinyls[$i]->getTracksFaceB()?></td>
         <td><?=$vinyls[$i]->getLabel()?></td>
-        <td><img src="../sources/img/vinyl_1680.jpg" width="50%"/></td>
+        <td><img src="sources/img/vinyl_1680.jpg" width="50%"/></td>
         <td><?=$vinyls[$i]->getStock()?></td>
         <td><?=$vinyls[$i]->getDescription()?></td>
         <td>
@@ -57,8 +61,9 @@
             </form>
         </td>
         <td><a href="#">Delete entry</a></td>
-
-
     </tr>
+
+
+
     <?php $i++; } ?>
 </table>
