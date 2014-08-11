@@ -10,6 +10,7 @@ $access1="navlogIn";
 $access2=["accueil", "store", "panier","confirmPanier","commandeValide","commande", "LogIn", "article", "article2"];
 $access3=["new","platine","vinyl","funk", "soul", "rock"];
 $access4=["addressConfirmPanier", "addressModifPanier"];
+$access5=["backendStock","backendClient", "backendOrder", "backendAdmin"];
 
 if (isset($_GET['nav']))
 	$nav = $_GET['nav'];
@@ -25,6 +26,11 @@ if (isset($_GET['page']))
 	$page = $_GET['page'];
 else
 	$page = 'accueil';
+
+if (isset($_GET['backendpage']))
+	$backendpage = $_GET['backendpage'];
+else
+	$backendpage = 'backendOrder';
 
 if(isset($_GET['section']))
 	$section = $_GET['section'];

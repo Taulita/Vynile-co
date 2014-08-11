@@ -1,4 +1,6 @@
 <?php
+require("models/platine.class.php");
+require("models/vinyle.class.php");
 $error5='';
 $idUser=$_SESSION['id'];
 $req="SELECT * FROM t_commande LEFT JOIN t_user ON t_commande.id_client = t_user.id WHERE t_commande.id_client='".$idUser."'  ";

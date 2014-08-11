@@ -16,14 +16,16 @@ while($user = mysqli_fetch_object($res, "User"))
 			address='".mysqli_real_escape_string($db, $user->getAddress())."',
 			codePostal= '".mysqli_real_escape_string($db, $user->getCodePostal())."',
 			ville='".mysqli_real_escape_string($db, $user->getVille())."' WHERE id='".$idUser."'";
-			$res=mysqli_query($db,$req);
-			header('Location:index.php?page=confirmPanier&sectionPanier=addressConfirmPanier#address');
+			mysqli_query($db,$req);
+			require('views/addressConfirmPanier.phtml');
+			//header('Location:index.php?page=confirmPanier&sectionPanier=addressConfirmPanier#address');
 		}
 		else
 		{
 			$error2="Vos informations sont incorrectes";
 		}		
 	}
-	require('views/addressModifPanier.phtml');	
+	else
+		require('views/addressModifPanier.phtml');
 }
 ?>
