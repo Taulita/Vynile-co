@@ -21,7 +21,7 @@ else if($search=='new')
 
 else
 {
-	$req= "SELECT * FROM t_article WHERE categorie='".$search."' OR style='".$search."' OR nom='".$search."' OR artiste='".$search."' OR marque='".$search."' OR label='".$search."' ORDER BY prixTTC";
+	$req= "SELECT * FROM t_article WHERE categorie LIKE '".$search."%' OR style LIKE '".$search."%' OR nom LIKE '".$search."%' OR artiste LIKE '".$search."%' OR marque LIKE '".$search."%' OR label LIKE '".$search."%' ORDER BY prixTTC";
 	$res=mysqli_query($db,$req);
 	if(mysqli_num_rows($res)>0)
 	{

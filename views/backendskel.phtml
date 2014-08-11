@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="sources/css/bootstrap-responsive.css">
     <link rel="stylesheet" href="sources/css/animate.css">
     <link rel="stylesheet" href="sources/css/font-awesome.css">
-    <link rel="stylesheet" href="sources/css/stylesheet.css">
+    <link rel="stylesheet" href="sources/css/backstylesheet.css">
     <script src="sources/js/jquery.js"></script>
     <script src="sources/js/script.js"></script>
   	<script src="sources/js/bootstrap.js"></script>
@@ -19,24 +19,16 @@
 
     <div id="container-fluid" class="content page">
       
-     <!-- <nav class="container">
-        <?php //require('apps/backnav.php');?>
+      <nav class="container">
+        <?php require('apps/backendNav.php');?>
       </nav>
-      
-      <header class="container">
-         <?php //require('apps/backheader.php');?>
-      </header>-->
-   
     
       <div class="container span10">
         <section id="page" class=''>
-          <?php require('apps/backend.php');?>   
+          <?php require('apps/'.$backendpage.'.php');?>   
         </section>
       </div>
-  
-     
-
-                    
+             
       <footer class="container">
         <?php require('apps/footer.php');?>
       </footer>
