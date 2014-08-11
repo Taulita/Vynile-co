@@ -1,0 +1,64 @@
+<h3>Vinyls</h3>
+<table class="table" title="Vinyl List">
+    <tr>
+        <th>Article ID</th>
+        <th>Artist</th>
+        <th>Nom</th>
+        <th>Year</th>
+        <th>Style</th>
+        <th>Prix TTC</th>
+        <th>Tracks side A</th>
+        <th>Tracks side B</th>
+        <th>Label</th>
+        <th>Cover</th>
+        <th>Stock</th>
+        <th>Technical Details</th>
+        <th>Modify</th>
+        <th>Delete</th>
+    </tr>
+    <?php $i=0;
+    while (isset($vinyls[$i])) { ?>
+    <tr>        
+        
+<td><?=$vinyls[$i]->getId()?></td>
+<td><input name="artist" type="text" value="<?=$vinyls[$i]->getArtiste()?>"></td>
+<td><input name="name" type="text" value="<?=$vinyls[$i]->getNom()?>"></td>
+<td><input name="year" type="text" value="<?=$vinyls[$i]->getAnnee()?>"></td>
+<td><input name="style" type="text" value="<?=$vinyls[$i]->getStyle()?>"></td>
+<td><input name="prixTTC" type="text" value="<?=$vinyls[$i]->getPrixTTC()
+?>"></td>
+<td><input name="tracksA" type="text" value="<?=$vinyls[$i]->getTracksFaceA()?>"></td>
+<td><input name="tracksB" type="text" value="<?=$vinyls[$i]->getTracksFaceB()?>"></td>
+<td><input name="label" type="text" value="<?=$vinyls[$i]->getLabel()?>"></td>
+<td><img src="../sources/img/vinyl_1680.jpg" width="50%"/></td>
+<td><input name="stock" type="text" value="<?=$vinyls[$i]->getStock()?>"></td>
+<td><input name="description" type="text" value="<?=$vinyls[$i]->getDescription()?>"></td>
+<td><input name="validate-vinyl<?=$i?>" type="submit" class="btn btn-warning" value="Valider" /></td>
+<td><a href="#">Delete entry</a></td>
+    </tr>
+
+    <tr>
+
+        <td><?=$vinyls[$i]->getId()?></td>
+        <td><?=$vinyls[$i]->getArtiste()?></td>
+        <td><?=$vinyls[$i]->getNom()?></td>
+        <td><?=$vinyls[$i]->getAnnee()?></td>
+        <td><?=$vinyls[$i]->getStyle()?></td>
+        <td><?=$vinyls[$i]->getPrixTTC()?></td>
+        <td><?=$vinyls[$i]->getTracksFaceA()?></td>
+        <td><?=$vinyls[$i]->getTracksFaceB()?></td>
+        <td><?=$vinyls[$i]->getLabel()?></td>
+        <td><img src="../sources/img/vinyl_1680.jpg" width="50%"/></td>
+        <td><?=$vinyls[$i]->getStock()?></td>
+        <td><?=$vinyls[$i]->getDescription()?></td>
+        <td>
+            <form method="POST" action="index.php?admin=ok">
+            <input name="modify-vinyl<?=$i?>" type="submit" class="btn btn-warning" value="Modify" />
+            </form>
+        </td>
+        <td><a href="#">Delete entry</a></td>
+
+
+    </tr>
+    <?php $i++; } ?>
+</table>
