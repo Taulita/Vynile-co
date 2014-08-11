@@ -1,42 +1,24 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="#">
-                <img src="sources/img/logo1.jpg" alt="logo">
-            </a>
-            <ul class="nav pull-right">
-                <li class="divider-vertical dropdown">
-                    <?php require("apps/".$navSection.".php");?>
-                </li>
-                <li class="divider-vertical">
-                    <a href="index.php?page=panier">Panier (<?=$panier?>)</a>
-                </li>
-            </ul>
+        <div class="container">  
+            <img class='span1' src="sources/img/logo1.jpg" alt="logo">
              
-            <ul class="nav pull-left">
+            <ul class="nav">
                 <li class="divider-vertical">
-                    <a href="index.php?page=accueil">Accueil</a>
-                </li>
-                <li class="divider-vertical">
-                    <a href="index.php?page=store&section=list&search=new">Nouveaut&eacutes</a>
+                    <a href="index.php?backendpage=backendOrder">Commandes Client</a>
                 </li>
                 <li class="divider-vertical">
-                    <a href="index.php?page=store&section=list&search=platine">Platines</a>
+                    <a href="index.php?backendpage=backendStock">Gestion des Stocks</a>
                 </li>
-                <li class="divider-vertical dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Vinyles 
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <?php require("apps/navCategorie.php");?>
-                        <li><a href="index.php?page=store&section=list&search=vinyl">Tous</a></li>
-                    </ul>
+                <li class="divider-vertical">
+                    <a href="index.php?backendpage=backendClient">Client</a>
                 </li>
+                <li class="divider-vertical">
+                    <a href="index.php?backendpage=backendAdmin">Gestion des Droits</a>
+                </li>
+                <li><a href="index.php?logOut=yes">D&eacute;connexion</a></li>
             </ul>  
-             <form class="navbar-search pull-right" action="index.php?page=store&section=list" method="POST">
-                    <input type="text" class="search-query" name='search' placeholder="Vous cherchez...">
-            </form> 
+           
         </div>
     </div>
 </div>
