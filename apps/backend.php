@@ -1,5 +1,6 @@
 <?php
 
+require('models/article.class.php');
 require('models/platine.class.php');
 require('models/vinyle.class.php');
 //require('sources/confphp/param.conf.php');
