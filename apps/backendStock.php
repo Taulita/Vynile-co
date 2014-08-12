@@ -4,6 +4,11 @@ require('models/user.class.php');
 require('models/platine.class.php');
 require('models/vinyle.class.php');
 
+
+
+//---------GESTION DES VINYLES---------//
+
+
 if (isset($_POST['artist'], $_POST['name'], $_POST['style'], $_POST['cover'], $_POST['description'], $_POST['prixTTC'], $_POST['stock'], $_POST['year'], $_POST['label'], $_POST['tracksA'], $_POST['tracksB'])) { 
 
 $req = "UPDATE t_article SET
@@ -23,7 +28,41 @@ WHERE id = '".$_POST["id"]."'";
 mysqli_query($db, $req);
 }
 
+if (isset($_POST["delete-vinyl"])) {
 
+$req2 = "DELETE FROM t_article WHERE id = '".$_POST['id']."'";
+
+mysqli_query($db,$req2);
+
+}
+
+//---------GESTION DES PLATINES---------//
+
+if (isset($_POST['name'], $_POST['year'], $_POST['prixTTC'], $_POST['description'],  $_POST['stock'], $_POST['brand'])) { 
+
+$req3 = "UPDATE t_article SET
+nom = '".$_POST['name']."',
+annee = '".$_POST['year']."',
+prixTTC = '".$_POST['prixTTC']."',
+brefDescriptif = '".$_POST['description']."',
+stock = '".$_POST['stock']."',
+marque = '".$_POST['brand']."'
+WHERE id = '".$_POST["id"]."'";
+
+mysqli_query($db, $req3);
+}
+
+
+if (isset($_POST["delete-platine"])) {
+
+$req4 = "DELETE FROM t_article WHERE id = '".$_POST['id']."'";
+
+mysqli_query($db,$req4);
+
+}
+
+
+//---------------GETTERS----------------//
 
 
 function getVinyls($db) {
@@ -48,7 +87,6 @@ function getVinyls($db) {
 $vinyls = getVinyls($db);
 
 
-//-----------------------GESTION DES PLATINES------------------------//
 
 function getPlatines($db) {
 	// $server = "localhost";
@@ -61,7 +99,7 @@ function getPlatines($db) {
 	$res = mysqli_query($db, $req);
 	$platines = array();
 
-	while ($platine = mysqli_fetch_object($res, "Article")) 
+	while ($platine = mysqli_fetch_object($res, "Platine")) 
 	{
 		$platines[] = $platine;
 	}
@@ -74,13 +112,6 @@ $platines = getPlatines($db);
 
 
 
-if (isset($_POST["delete-vinyl"])) {
-
-$req2 = "DELETE FROM t_article WHERE id = '".$_POST['id']."'";
-
-mysqli_query($db,$req2);
-
-}
 
 
 require('views/backendStock.phtml');

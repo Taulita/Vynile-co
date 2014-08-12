@@ -90,7 +90,28 @@
     </tr>
     <?php $i=0;
         while (isset($platines[$i])) {?>
-            <tr>
+
+<tr class="togglemodplatines defaulthidden">        
+<form name="formmodifyplatines" action="index.php?admin=ok&backendpage=backendStock" method="POST">
+<td><?=$platines[$i]->getId()?>
+    <input type="hidden" name="id" type="text" value="<?=$platines[$i]->getId()?>"></td>
+<td><input name="name" type="text" value="<?=$platines[$i]->getNom()?>"></td>
+<td><input name="year" type="text" value="<?=$platines[$i]->getAnnee()?>"></td>
+<td><input name="prixTTC" type="text" value="<?=$platines[$i]->getPrixTTC()
+?>"></td>
+<td><input name="description" type="text" value="<?=$platines[$i]->getDescription()?>"></td>
+<td><input name="stock" type="text" value="<?=$platines[$i]->getStock()?>"></td>
+<td><input name="brand" type="text" value="<?=$platines[$i]->getMarque()?>"></td>
+<td><input name="validate-platines" type="submit" class="btn" value="Valider" /></td>
+<td><input name="delete-platine" type="button" class="btn btn-warning" value="Delete Entry" /></td>
+</form>
+    </tr>
+
+
+
+
+
+            <tr class="togglemodplatines">
                 <td><?=$platines[$i]->getId()?></td>
                 <td><?=$platines[$i]->getNom()?></td>
                 <td><?=$platines[$i]->getAnnee()?></td>
@@ -99,6 +120,7 @@
                 <td><?=$platines[$i]->getStock()?></td>
                 <td><?=$platines[$i]->getMarque()?></td>
                 <td><?=$platines[$i]->getFicheTechnique()?></td>
+                <td><input name="modify-platines" type="button" class="btn modifyplatines" value="Modify" /></td>
                 <td>
                     <form action="index.php?admin=ok&backendpage=backendStock" method="POST">
                 <input name="delete-platine" type="submit" class="btn btn-warning" value="Delete Entry" />
