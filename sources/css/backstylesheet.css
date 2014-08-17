@@ -2,11 +2,11 @@
 body {
 	font-size: 12px;
 	font-family: FontAwesome, sans-serif;
-	color: rgb(0, 0, 0);
+    color: rgb(204, 204, 204);
 	margin: 0;
 	padding: 0;
 	text-shadow: 0.2px 0.2px 0.3px #af6c56;
-	/*background: #ffffff url(../../sources/img/vinyl_1680.jpg) no-repeat fixed;*/
+	background: #ffffff url(../../sources/img/vinyl_1680.jpg) no-repeat fixed;
 }
 
 .page {
