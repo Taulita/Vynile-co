@@ -3,17 +3,17 @@ body {
 	font-size: 12px;
 	font-family: FontAwesome, sans-serif;
 	color: rgb(204, 204, 204);
+    text-shadow: 0.2px 0.2px 0.3px #982F33;
 	margin: 0;
 	padding: 0;
-	text-shadow: 0.2px 0.2px 0.3px #af6c56;
 	background: #ffffff url(../../sources/img/vinyl_1680.jpg) no-repeat fixed;
 }
 
 .page {
-	margin-left: 5em;	
+	margin-left: 5em;
 }
 
-.row{
+.row {
 	margin-top: 2%;
 	margin-bottom: 2%;
 }
@@ -117,7 +117,9 @@ h2{
 /*---FOOTER---*/
 footer {
 	text-align: center;
-	color: #db9f95;
+	color: #1293ce;
+    /*text-shadow: 0.2px 0.2px 0.3px #af6c56;*/
+
 }
 
 .copyright {
